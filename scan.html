@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
-    <title>Document</title>
-      <link rel="stylesheet" href="./style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=\, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -12,105 +12,326 @@
             crossorigin="anonymous"
         >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-</head>
-<body>
-    
-    <!-- footer -->
-      <footer class="footer mt-5 py-5">
-            <div class="container">
-                <div class="row gy-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="footer-logo fw-bold mb-3">
-                            LabelLense
-                        </h3>
-                        <p class="footer-text mb-4">
-                            Empowering you to make smarter, healthier choices with the power of AI.
-                        </p>
-                        <div class="social-icons d-flex gap-3">
-                            <a href="#">
-                                <i class="bi bi-facebook fs-5"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-twitter-x fs-5"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bi bi-instagram fs-5"></i>
-                            </a>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="stylesheet" href="./media.css">
+    </head>
+    <body>
+        <!-- MOBILE NAVBAR -->
+        <nav class="mobile-nav d-md-none d-flex justify-content-between align-items-center">
+            <img src="./assets/Labellogo.png" class="logo mb-0">
+            <button class="btn text-white" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+                <i class="fa-solid fa-bars fs-3"></i>
+            </button>
+        </nav>
+        <!-- OFFCANVAS -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
+            <div class="offcanvas-header">
+                <img src="./assets/Labellogo.png" width="150">
+                <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a href="./index.html">
+                    <i class="fa-solid fa-house me-2"></i>
+                    Home
+                </a>
+                <a href="./scan.html">
+                    <i class="fa-solid fa-camera me-2"></i>
+                    Scan Product
+                </a>
+                <a href="./compare.html">
+                    <i class="fa-solid fa-code-compare me-2"></i>
+                    Compare Products
+                </a>
+                <a href="./shelf.html">
+                    <i class="fa-solid fa-book me-2"></i>
+                    My Shelf
+                </a>
+                <a href="./about.html">
+                    <i class="fa-solid fa-circle-info me-2"></i>
+                    About Us
+                </a>
+            </div>
+        </div>
+        <!-- MAIN -->
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Desktop Sidebar -->
+                <aside class="col-md-3 col-lg-2 sidebar d-none d-md-block">
+                    <img src="./assets/Labellogo.png" class="logo">
+                    <a href="#">
+                        <i class="fa-solid fa-house me-2"></i>
+                        Home
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-camera me-2"></i>
+                        Scan Product
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-code-compare me-2"></i>
+                        Compare Products
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-book me-2"></i>
+                        My Shelf
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-circle-info me-2"></i>
+                        About Us
+                    </a>
+                </aside>
+                <!-- Your Content -->
+                <main class="col-md-9 col-lg-10 content scan-page ">
+                    <div class="scan-content ">
+                        <div class="scan-heading px-3  mb-0">
+                            <h1 class="page-title col-lg-8 d-block mx-auto">
+                                Scan Your Product
+                            </h1>
+                            <p class="page-subtitle col-lg-8 d-block mx-auto ">
+                                Upload or capture a product label to instantly receive an AI-powered health analysis,
+                            ingredient breakdown, and personalized recommendation.
+                            </p>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <h5 class="mb-4">Product</h5>
-                        <ul class="list-unstyled d-flex flex-column gap-3">
-                            <li>
-                                <a href="#">Scan Product</a>
-                            </li>
-                            <li>
-                                <a href="#">Compare</a>
-                            </li>
-                            <li>
-                                <a href="#">My Shelf</a>
-                            </li>
-                            <li>
-                                <a href="#">Dashboard</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <h5 class="mb-4">Company</h5>
-                        <ul class="list-unstyled d-flex flex-column gap-3">
-                            <li>
-                                <a href="#">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#">Mission</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                            <li>
-                                <a href="#">Careers</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-2 col-md-6">
-                        <h5 class="mb-4">Support</h5>
-                        <ul class="list-unstyled d-flex flex-column gap-3">
-                            <li>
-                                <a href="#">Help Center</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                            <li>
-                                <a href="#">Privacy</a>
-                            </li>
-                            <li>
-                                <a href="#">Terms</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-md-12">
-                        <h5 class="mb-3">Stay Updated</h5>
-                        <p class="footer-text mb-4">
-                            Get latest updates on AI insights.
-                        </p>
-                        <div class="input-group">
-                            <input class="form-control footer-input" placeholder="Enter your email">
-                            <button class="btn btn-primary">
-                                <i class="bi bi-send-fill"></i>
+                        <!-- <div class="scan-category-wrapper d-flex flex-wrap justify-content-center gap-3 mb-5">
+                            <button class=" btn-primary scan-category-btn">
+                                <i class="bi bi-basket2-fill me-2"></i>
+                                Food
                             </button>
-                        </div>
+                            <button class=" btn-secondary scan-category-btn">
+                                <i class="bi bi-droplet-fill me-2"></i>
+                                Skincare
+                            </button>
+                            <button class=" btn-secondary scan-category-btn">
+                                <i class="bi bi-scissors me-2"></i>
+                                Haircare
+                            </button>
+                            <button class=" btn-secondary scan-category-btn">
+                                <i class="bi bi-capsule me-2"></i>
+                                Supplements
+                            </button>
+                        </div> -->
+                        <di class="row g-4">
+                            <div class="col-lg-8 container mx-3 p-4  d-block mx-auto mx-2 ">
+                                <!-- Scanning Tips -->
+                                <div class="scan-tips-section text-light mb-5">
+                                    <h3 class="text-center card-title text-light mb-4">
+                                        Before You Scan
+                                    </h3>
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <div class="scan-tip-card h-100 p-4">
+                                                <div class=" text-center ">
+                                                    <div class="scan-tip-icon mb-2 mx-auto">
+                                                        <i class="bi bi-camera-fill "></i>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="card-title mb-2">Good Lighting</h5>
+                                                        <p class="card-subtitle text-secondary mb-0">
+                                                            Make sure the label is well lit and free from shadows.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="scan-tip-card h-100 p-4">
+                                                 <div class=" text-center ">
+                                                    <div class="scan-tip-icon mb-2 mx-auto">
+                                                        <i class="bi bi-aspect-ratio-fill"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="card-title mb-2">Keep It Straight</h5>
+                                                        <p class="card-subtitle text-secondary mb-0">
+                                                            Capture the entire nutrition label without cutting edges.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="scan-tip-card h-100 p-4">
+                                                 <div class=" text-center ">
+                                                    <div class="scan-tip-icon mb-2 mx-auto">
+                                                        <i class="bi bi-zoom-in"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="card-title mb-2">Readable Text</h5>
+                                                        <p class="card-subtitle text-secondary mb-0">
+                                                            Avoid blurry images. Keep the label in focus.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-md-6">
+                                            <div class="scan-tip-card h-100 p-4">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="scan-tip-icon me-3">
+                                                        <i class="bi bi-shield-check"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="card-title mb-2">Privacy Safe</h5>
+                                                        <p class="card-subtitle text-secondary mb-0">
+                                                            Images are used only for analysis and are never shared.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- scanning done -->
+                                <div class="card scan-upload-card border-0" id="uploadCard">
+                                    <div class="card-body p-5 text-center">
+                                        <div class="scan-upload-icon">
+                                            <i class="bi bi-cloud-arrow-up"></i>
+                                        </div>
+                                        <h3 class="card-title mt-4">
+                                            Upload Product Label
+                                        </h3>
+                                        <p class="card-subtitle">
+                                            Drag & drop your image here or browse from your device.
+                                        </p>
+                                        <input
+                                            type="file"
+                                            id="scanImageInput"
+                                            class="d-none"
+                                            id="browseBtn"
+                                        >
+                                        <button class=" btn-secondary mt-4" id="browseBtn">
+                                            Browse Files
+                                        </button>
+                                        <small class="d-block mt-4 text-secondary">
+                                            PNG • JPG • JPEG
+                                            <br>
+                                            Maximum Size : 10 MB
+                                        </small>
+                                    </div>
+                                    <button class=" text-light btn-tertiary mt-3">
+                                        <i class="bi bi-camera-fill me-2"></i>
+                                        Use Camera
+                                    </button>
+                                </div>
+                                <div class="card scan-preview-card border-0  d-none" id="previewCard">
+                                    <div class="card-body text-center">
+                                        <img id="previewImage" class="img-fluid rounded mb-3" style="max-height:250px;">
+                                        <h5 id="fileName">
+                                            filename.jpg
+                                        </h5>
+                                        <p>
+                                            Ready to Analyze
+                                        </p>
+                                        <div class="d-flex gap-3 justify-content-center btn-flex">
+                                            <button class="btn-secondary " id="changeImageBtn">
+                                                Change Image
+                                            </button>
+                                            <button class="btn-secondary" id="analyze">
+                                                Analyze Product
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="footer py-5">
+                                <div class="container">
+                                    <div class="row gy-5">
+                                        <div class="col-lg-3 col-md-6">
+                                            <h3 class="footer-logo fw-bold mb-3">
+                                                LabelLense
+                                            </h3>
+                                            <p class="footer-text mb-4">
+                                                Empowering you to make smarter, healthier choices with the power of AI.
+                                            </p>
+                                            <div class="social-icons d-flex gap-3">
+                                                <a href="#">
+                                                    <i class="bi bi-facebook fs-5"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="bi bi-twitter-x fs-5"></i>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="bi bi-instagram fs-5"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 col-md-6">
+                                            <h5 class="mb-4">Product</h5>
+                                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                                <li>
+                                                    <a href="#">Scan Product</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Compare</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">My Shelf</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Dashboard</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-6">
+                                            <h5 class="mb-4">Company</h5>
+                                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                                <li>
+                                                    <a href="#">About Us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Mission</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Blog</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Careers</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-2 col-md-6">
+                                            <h5 class="mb-4">Support</h5>
+                                            <ul class="list-unstyled d-flex flex-column gap-3">
+                                                <li>
+                                                    <a href="#">Help Center</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Contact</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Privacy</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Terms</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-3 col-md-12">
+                                            <h5 class="mb-3">Stay Updated</h5>
+                                            <p class="footer-text mb-4">
+                                                Get latest updates on AI insights.
+                                            </p>
+                                            <div class="input-group">
+                                                <input class="form-control footer-input" placeholder="Enter your email">
+                                                <button class="btn btn-primary">
+                                                    <i class="bi bi-send-fill"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-2">
+                                    <div class="text-center">
+                                        <p class="copyright mb-0">
+                                            © 2026 LabelLense. All Rights Reserved.
+                                        </p>
+                                    </div>
+                                </div>
+                            </footer>
+                        </main>
                     </div>
                 </div>
-                <hr class="my-2">
-                <div class="text-center">
-                    <p class="copyright mb-0">
-                        © 2026 LabelLense. All Rights Reserved.
-                    </p>
-                  
-              
-            </div>
-        </footer>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
-</html>
+                <!-- footer -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                <script src="./script/scan.js">
+          
+                </script>
+            </body>
+        </html>
