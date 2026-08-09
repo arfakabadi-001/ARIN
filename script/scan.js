@@ -52,12 +52,43 @@ changeImageBtn.addEventListener("click", () => {
     uploadCard.classList.remove("d-none");
 
 });
-        let analyze = document.getElementById("analyze");
-      analyze.onclick = () => {
-    const file = fileInput.files[0];
+        const analyze = document.getElementById("analyze");
+
+
+
+// analyze.addEventListener("click", function (e) {
+//     e.preventDefault();
+//  console.log("Analyze clicked");
+//     const formData = new FormData();
+//     formData.append("image", fileInput.files[0]);
+
+//    console.log("Sending image...");
+
+//     fetch("http://127.0.0.1:5000/analyze", {
+//         method: "POST",
+//         body: formData
+//     })
+//     .then(response => response.text())
+//    .then(data => {
+//     console.log("OCR RESULT:", data);
+// })
+//     .catch(error => {
+//     console.log("FETCH ERROR:", error);
+//     })
+// });
+
+analyze.onclick = (e) => {
+    e.preventDefault();
+    console.log("1. click fired");
+    console.log("2. file:", fileInput.files[0]);
+
+    if (!fileInput.files[0]) {
+        alert("No file selected!");
+        return;
+    }
 
     const formData = new FormData();
-    formData.append("image", file);
+    formData.append("image", fileInput.files[0]);
 
     fetch("http://127.0.0.1:5000/analyze", {
         method: "POST",
@@ -65,11 +96,14 @@ changeImageBtn.addEventListener("click", () => {
     })
     .then(response => response.text())
     .then(data => {
-        console.log(data);
+        console.log("4. data:", data);
         window.location = "./process.html";
-    });
+    })
+    .catch(err => console.log("5. FETCH FAILED:", err));
 };
-
+fileInput.addEventListener("change", () => {
+    console.log("changed, files:", fileInput.files[0]);
+});
     // fetch("http://127.0.0.1:5000/test")
     // .then(response => response.text())
     // .then(data => console.log(data));
@@ -79,3 +113,5 @@ changeImageBtn.addEventListener("click", () => {
     // })
     // .then(response=>response.text())
     // .then(data=>console.log(data));
+
+    
