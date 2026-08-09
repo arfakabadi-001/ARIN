@@ -53,10 +53,29 @@ changeImageBtn.addEventListener("click", () => {
 
 });
         let analyze = document.getElementById("analyze");
-        analyze.onclick = () => {
+      analyze.onclick = () => {
+    const file = fileInput.files[0];
 
-            window.location = "./process.html";
+    const formData = new FormData();
+    formData.append("image", file);
 
-        }
+    fetch("http://127.0.0.1:5000/analyze", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        window.location = "./process.html";
+    });
+};
 
-    
+    // fetch("http://127.0.0.1:5000/test")
+    // .then(response => response.text())
+    // .then(data => console.log(data));
+
+    // fetch("http://127.0.0.1:5000/analyze",{
+    //     method:"POST"
+    // })
+    // .then(response=>response.text())
+    // .then(data=>console.log(data));
