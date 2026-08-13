@@ -1,6 +1,6 @@
-        //    scan page 
-           
-           const browseBtn = document.getElementById("browseBtn");
+//    scan page 
+
+const browseBtn = document.getElementById("browseBtn");
 const fileInput = document.getElementById("scanImageInput");
 
 const uploadCard = document.getElementById("uploadCard");
@@ -16,66 +16,26 @@ browseBtn.addEventListener("click", () => {
 
 // When user selects image
 fileInput.addEventListener("change", () => {
-
     const file = fileInput.files[0];
-
     if (!file) return;
 
-    // Show file name
     fileName.innerText = file.name;
+    const imageURL = URL.createObjectURL(file);
+    previewImage.src = imageURL;
 
-    // Show image preview
-   const imageURL = URL.createObjectURL(file);
-previewImage.src = imageURL;
-
-    // Hide upload card
     uploadCard.classList.add("d-none");
-
-    // Show preview card
     previewCard.classList.remove("d-none");
-
 });
+
 const changeImageBtn = document.getElementById("changeImageBtn");
-
 changeImageBtn.addEventListener("click", () => {
-
-    // Clear previous file
     fileInput.value = "";
-
-    // Remove previous preview
     previewImage.src = "";
-
-    // Hide preview card
     previewCard.classList.add("d-none");
-
-    // Show upload card
     uploadCard.classList.remove("d-none");
-
 });
-        const analyze = document.getElementById("analyze");
 
-
-
-// analyze.addEventListener("click", function (e) {
-//     e.preventDefault();
-//  console.log("Analyze clicked");
-//     const formData = new FormData();
-//     formData.append("image", fileInput.files[0]);
-
-//    console.log("Sending image...");
-
-//     fetch("http://127.0.0.1:5000/analyze", {
-//         method: "POST",
-//         body: formData
-//     })
-//     .then(response => response.text())
-//    .then(data => {
-//     console.log("OCR RESULT:", data);
-// })
-//     .catch(error => {
-//     console.log("FETCH ERROR:", error);
-//     })
-// });
+const analyze = document.getElementById("analyze");
 
 analyze.onclick = (e) => {
     e.preventDefault();
@@ -84,22 +44,11 @@ analyze.onclick = (e) => {
         return;
     }
 
-    // Image ko base64 me convert karke save karo (report page pe dikhane ke liye)
     const reader = new FileReader();
     reader.onload = () => {
         sessionStorage.setItem("scannedImage", reader.result);
+        sessionStorage.setItem("scanImageForAnalysis", reader.result);
+        window.location = "./process.html";
     };
     reader.readAsDataURL(fileInput.files[0]);
-
-    // Baaki tumhara existing fetch/analyze logic yahi rahega
-    const formData = new FormData();
-    formData.append("image", fileInput.files[0]);
-
-    fetch("http://127.0.0.1:5000/analyze", { method: "POST", body: formData })
-        .then(response => response.json())
-        .then(data => {
-            sessionStorage.setItem("scanResult", JSON.stringify(data));
-            window.location = "./process.html";
-        })
-        .catch(err => console.log("FETCH FAILED:", err));
 };

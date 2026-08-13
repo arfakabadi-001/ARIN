@@ -1,12 +1,15 @@
-// Process page - sirf animation dikhata hai, result already scan.js se save ho chuka hai
 let percentage = document.getElementById("percentage");
 let count = 0;
 let ring = document.querySelector(".progress-ring");
+let animationDone = false;
+let backendDone = false;
+let reportData = null;
 
 let timer = setInterval(() => {
     if (count >= 100) {
         clearInterval(timer);
-        window.location = "./product.html";
+        animationDone = true;
+        tryRedirect();
         return;
     }
     count++;
@@ -37,3 +40,32 @@ let timer = setInterval(() => {
         ring.style.animation = 'none';
     }
 }, 100);
+
+// Backend call — animation ke saath parallel chalta hai
+const base64Image = sessionStorage.getItem("scanImageForAnalysis");
+
+fetch(base64Image)
+    .then(res => res.blob())
+    .then(blob => {
+        const formData = new FormData();
+        formData.append("image", blob, "scan.jpg");
+        return fetch("http://127.0.0.1:5000/analyze", { method: "POST", body: formData });
+    })
+    .then(response => response.json())
+    .then(data => {
+        reportData = data;
+        backendDone = true;
+        tryRedirect();
+    })
+    .catch(err => {
+        console.log("FETCH FAILED:", err);
+        alert("Analysis failed, please try again.");
+        window.location = "./scan.html";
+    });
+
+function tryRedirect() {
+    if (animationDone && backendDone) {
+        sessionStorage.setItem("scanResult", JSON.stringify(reportData));
+        window.location = "./product.html";
+    }
+}
