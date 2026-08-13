@@ -36,16 +36,16 @@
                         <div class="col-lg-8">
                             <div class="d-flex gap-4 align-items-center">
                                 <div class="product-image">
-                                    <img src="https://i5.walmartimages.com/asr/b98e162c-77b3-4576-a095-84ac945b6a6d.8a770380175d405029f9a92daa697799.jpeg" class="img-fluid rounded-3">
+                                    <img id="productImage" src="" class="img-fluid rounded-3">
                                 </div>
                                 <div class="product-info">
-                                    <h2 class="fw-bold text-light mb-1">
+                                    <h2 class="fw-bold text-light mb-1" id="productName">
                                         Quaker Oats
                                     </h2>
-                                    <h3 class="fw-semibold report-subheading mb-2">
+                                    <h3 class="fw-semibold report-subheading mb-2" id="productVariant">
                                         Old Fashioned
                                     </h3>
-                                    <p class="card-subtitle mb-3">
+                                    <p class="card-subtitle mb-3" id="productBrand">
                                         Quaker
                                     </p>
                                     <span class="report-chip">
@@ -60,12 +60,12 @@
                         </div>
                         <!-- RIGHT -->
                         <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                            <small class="card-subtitle">
+                            <small class="card-subtitle text-light">
                                 Overall Health Score
                             </small>
                             <div class="health-circle mx-auto my-3">
                                 <div class="inner-circle">
-                                    <div class="score">
+                                    <div class="score" id="healthScore">
                                         85
                                     </div>
                                 </div>
@@ -77,6 +77,17 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- SCORE BREAKDOWN -- NEW: explains WHY the score is what it is -->
+                <div class="card report-card border-0 mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3 text-light">
+                            Score Kyun Mila? (Score Breakdown)
+                        </h5>
+                        <div id="scoreBreakdown" class="text-light"></div>
+                    </div>
+                </div>
+
                 <div class="card border-0 mt-4 nutrition-card">
                     <div class="card-body">
                         <h5 class="card-title mb-4 text-light">
@@ -87,42 +98,42 @@
                             <div class="col">
                                 <div class="nutrition-box nutrition-highlight  rounded-4 text-center py-3 h-100">
                                     <small class="d-block">Calories</small>
-                                    <h3 class="fw-bold mb-0">389</h3>
+                                    <h3 class="fw-bold mb-0" id="calVal">389</h3>
                                     <small>kcal</small>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
                                     <small class="text-secondary d-block">Protein</small>
-                                    <h3 class="fw-bold text-light mb-0">16.9</h3>
+                                    <h3 class="fw-bold text-light mb-0" id="proteinVal">16.9</h3>
                                     <small class="text-secondary">g</small>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
                                     <small class="text-secondary d-block">Sugar</small>
-                                    <h3 class="fw-bold text-light mb-0">0.7</h3>
+                                    <h3 class="fw-bold text-light mb-0" id="sugarVal">0.7</h3>
                                     <small class="text-secondary">g</small>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
                                     <small class="text-secondary d-block">Fat</small>
-                                    <h3 class="fw-bold text-light mb-0">6.9</h3>
+                                    <h3 class="fw-bold text-light mb-0" id="fatVal">6.9</h3>
                                     <small class="text-secondary">g</small>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
                                     <small class="text-secondary d-block">Fiber</small>
-                                    <h3 class="fw-bold text-light mb-0">10.6</h3>
+                                    <h3 class="fw-bold text-light mb-0" id="fiberVal">10.6</h3>
                                     <small class="text-secondary">g</small>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
                                     <small class="text-secondary d-block">Sodium</small>
-                                    <h3 class="fw-bold text-light mb-0">2</h3>
+                                    <h3 class="fw-bold text-light mb-0" id="sodiumVal">2</h3>
                                     <small class="text-secondary">mg</small>
                                 </div>
                             </div>
@@ -134,73 +145,7 @@
                         <h5 class="text-light card-title mb-4">
                             Health Indicators
                         </h5>
-                        <div class="row g-3 ">
-                            <div class="col-lg col-md-6">
-                                <div class="health-card health-green p-3 rounded-4 h-100">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="bi-heart-fill me-2"></i>
-                                        <span class="fw-semibold">
-                                            Low Sugar
-                                        </span>
-                                    </div>
-                                    <small>
-                                        Good
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="col-lg col-md-6">
-                                <div class="health-card health-green p-3 rounded-4 h-100">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="bi bi-check-circle-fill me-2"></i>
-                                        <span class="fw-semibold">
-                                            Low Sodium
-                                        </span>
-                                    </div>
-                                    <small>
-                                        Good
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="col-lg col-md-6">
-                                <div class="health-card health-green p-3 rounded-4 h-100">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="bi bi-check-circle-fill me-2"></i>
-                                        <span class="fw-semibold">
-                                            High Fiber
-                                        </span>
-                                    </div>
-                                    <small>
-                                        Good
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="col-lg col-md-6">
-                                <div class="health-card health-yellow p-3 rounded-4 h-100">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="bi bi-exclamation-circle-fill me-2"></i>
-                                        <span class="fw-semibold">
-                                            Saturated Fat
-                                        </span>
-                                    </div>
-                                    <small>
-                                        Moderate
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="col-lg col-md-6">
-                                <div class="health-card health-red p-3 rounded-4 h-100">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="bi bi-x-circle-fill me-2"></i>
-                                        <span class="fw-semibold">
-                                            Additives
-                                        </span>
-                                    </div>
-                                    <small>
-                                        High
-                                    </small>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="row g-3" id="healthIndicators"></div>
                     </div>
                 </div>
                 <div class="row g-3 mt-1">
@@ -240,12 +185,12 @@
                                 <div class="d-flex align-items-center nutrition-box">
                                     <i class="bi bi-hand-thumbs-up-fill fs-1 text-success me-3"></i>
                                     <div class="">
-                                        <h6 class="text-light mb-1">
+                                        <h6 class="text-light mb-1" id="recLabel">
                                             Should Buy
                                         </h6>
-                                        <p class="card-subtitle text-secondary mb-0">
+                                        <p class="card-subtitle text-secondary mb-0" id="recDesc">
                                             This product is healthy.
-                                        Choose it for most people.
+Choose it for most people.
                                         </p>
                                     </div>
                                 </div>
@@ -257,9 +202,9 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div class="d-flex align-items-center text-white">
-                                <div class="ai-icon me-3">
-                                    AI
-                                </div>
+                               <div class="ai-icon me-3 d-flex align-items-center justify-content-center" style="width:40px;height:40px;border-radius:50%;">
+    <i class="bi bi-stars text-white"></i>
+</div>
                                 <h5 class="card-title mb-0">AI Summary</h5>
                             </div>
                             <div>
@@ -271,9 +216,9 @@
                                 </button>
                             </div>
                         </div>
-                        <p class="card-subtitle text-secondary mb-0">
+                        <p class="card-subtitle text-secondary mb-0" id="aiSummaryText">
                             This is a healthy whole grain product with high fiber and protein.
-                        It is low in sugar and sodium, making it a great choice for a balanced diet.
+It is low in sugar and sodium, making it a great choice for a balanced diet.
                         </p>
                     </div>
                 </div>
@@ -283,11 +228,7 @@
                             <h5 class="card-title mb-0">
                                 Ingredient Analysis
                             </h5>
-                            <!-- <button class="btn btn-sm btn-secondary">
-                View Full List
-            </button> -->
                         </div>
-                        <!-- Heading -->
                         <div class="table-responsive">
                             <div class="ingredient-header row py-2 text-secondary fw-semibold small">
                                 <div class="col-3">Ingredient</div>
@@ -295,77 +236,21 @@
                                 <div class="col-5">Description</div>
                                 <div class="col-2 text-center">Status</div>
                             </div>
-                            <!-- Row 1 -->
-                            <div class="ingredient-row row align-items-center py-3">
-                                <div class="col-3">
-                                    <strong>Whole Grain Oats</strong>
-                                </div>
-                                <div class="col-2">
-                                    Main Ingredient
-                                </div>
-                                <div class="col-5 text-secondary">
-                                    Excellent source of fiber and complex carbohydrates.
-                                </div>
-                                <div class="col-2 text-center">
-                                    <span class="badge bg-success rounded-pill px-3">
-                                        Safe
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- Row 2 -->
-                            <div class="ingredient-row row align-items-center py-3">
-                                <div class="col-3">
-                                    <strong>Beta Glucan</strong>
-                                </div>
-                                <div class="col-2">
-                                    Fiber
-                                </div>
-                                <div class="col-5 text-secondary">
-                                    Helps reduce cholesterol and improves heart health.
-                                </div>
-                                <div class="col-2 text-center">
-                                    <span class="badge bg-success rounded-pill px-3">
-                                        Safe
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- Row 3 -->
-                            <div class="ingredient-row row align-items-center  py-3">
-                                <div class="col-3">
-                                    <strong>Natural Flavor</strong>
-                                </div>
-                                <div class="col-2">
-                                    Flavoring
-                                </div>
-                                <div class="col-5 text-secondary">
-                                    Source not fully disclosed by manufacturer.
-                                </div>
-                                <div class="col-2 text-center">
-                                    <span class="badge bg-warning rounded-pill px-3">
-                                        Moderate
-                                    </span>
-                                </div>
-                            </div>
-                            <!-- Row 4 -->
-                            <div class="ingredient-row row align-items-center py-3">
-                                <div class="col-3">
-                                    <strong>BHT</strong>
-                                </div>
-                                <div class="col-2">
-                                    Preservative
-                                </div>
-                                <div class="col-5 text-secondary">
-                                    Artificial preservative. Consume in moderation.
-                                </div>
-                                <div class="col-2 text-center">
-                                    <span class="badge bg-danger rounded-pill px-3">
-                                        Risky
-                                    </span>
-                                </div>
-                            </div>
+                            <div id="ingredientRows"></div>
                         </div>
                     </div>
                 </div>
+
+                <!-- CLAIMS VS REALITY -- NEW: verifies label's marketing claims against actual numbers -->
+                <div class="card text-light report-card border-0 mt-4" id="claimsCard" style="display:none;">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">
+                            Label Ke Claims — Sach Ya Sirf Marketing?
+                        </h5>
+                        <div id="claimsRows"></div>
+                    </div>
+                </div>
+
                 <!-- Nutritional Breakdown -->
                 <div class="card border-0 mt-4 nutrition-breakdown-card">
                     <div class="card-body">
@@ -476,54 +361,25 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- VALUE FOR MONEY + ALTERNATIVES -- NEW: this is the project's core differentiator -->
+                <div class="card text-light report-card border-0 mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">
+                            Value For Money
+                        </h5>
+                        <p class="fw-bold mb-1 text-light" id="valueVerdict"></p>
+                        <p class="text-secondary mb-4" id="valueReason"></p>
+                        <h6 class="text-light mb-2">Behtar Options Dhundhte Waqt Ye Dekho</h6>
+                        <ul class="text-secondary" id="alternativesList"></ul>
+                    </div>
+                </div>
+
             </div>
         </main>
-        <!-- </div>
-</div> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const macroChart = document.getElementById("macroChart");
-
-        new Chart(macroChart, {
-            type: "pie",
-
-            data: {
-                labels: [
-                    "Carbs",
-                    "Protein",
-                    "Fat",
-                    "Others"
-                ],
-
-                datasets: [{
-                    data: [65, 17, 16, 2],
-
-                    backgroundColor: [
-                        "#6c63d9",
-                        "#4adab3",
-                        "#f5c04a",
-                        "#e56b72"
-                    ],
-
-                    borderWidth: 0
-                }]
-            },
-
-            options: {
-                responsive: false,
-
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-
-                    tooltip: {
-                        enabled: true
-                    }
-                }
-            }
-        });
-    </script>
+  
+    <script src="./script/report.js"></script>
 </body>
 </html>

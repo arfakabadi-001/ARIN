@@ -79,39 +79,27 @@ changeImageBtn.addEventListener("click", () => {
 
 analyze.onclick = (e) => {
     e.preventDefault();
-    console.log("1. click fired");
-    console.log("2. file:", fileInput.files[0]);
-
     if (!fileInput.files[0]) {
         alert("No file selected!");
         return;
     }
 
+    // Image ko base64 me convert karke save karo (report page pe dikhane ke liye)
+    const reader = new FileReader();
+    reader.onload = () => {
+        sessionStorage.setItem("scannedImage", reader.result);
+    };
+    reader.readAsDataURL(fileInput.files[0]);
+
+    // Baaki tumhara existing fetch/analyze logic yahi rahega
     const formData = new FormData();
     formData.append("image", fileInput.files[0]);
 
-    fetch("http://127.0.0.1:5000/analyze", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        console.log("4. data:", data);
-        window.location = "./process.html";
-    })
-    .catch(err => console.log("5. FETCH FAILED:", err));
+    fetch("http://127.0.0.1:5000/analyze", { method: "POST", body: formData })
+        .then(response => response.json())
+        .then(data => {
+            sessionStorage.setItem("scanResult", JSON.stringify(data));
+            window.location = "./process.html";
+        })
+        .catch(err => console.log("FETCH FAILED:", err));
 };
-fileInput.addEventListener("change", () => {
-    console.log("changed, files:", fileInput.files[0]);
-});
-    // fetch("http://127.0.0.1:5000/test")
-    // .then(response => response.text())
-    // .then(data => console.log(data));
-
-    // fetch("http://127.0.0.1:5000/analyze",{
-    //     method:"POST"
-    // })
-    // .then(response=>response.text())
-    // .then(data=>console.log(data));
-
-    

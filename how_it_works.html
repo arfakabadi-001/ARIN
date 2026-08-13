@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+
+    <title>About LabelLense</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= MOBILE NAVBAR ================= -->
+
+    <nav class="mobile-nav d-md-none d-flex justify-content-between align-items-center">
+
+        <img src="./assets/Labellogo.png" class="logo mb-0" alt="LabelLense">
+
+        <button class="btn text-white" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+
+            <i class="fa-solid fa-bars fs-3"></i>
+
+        </button>
+
+    </nav>
+
+
+
+    <!-- ================= MOBILE OFFCANVAS ================= -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
+
+        <div class="offcanvas-header">
+
+            <img src="./assets/Labellogo.png" width="150" alt="LabelLense">
+
+            <button class="btn-close" data-bs-dismiss="offcanvas">
+            </button>
+
+        </div>
+
+
+        <div class="offcanvas-body">
+
+            <a href="./index.html">
+                <i class="fa-solid fa-house me-2"></i>
+                Home
+            </a>
+
+            <a href="./scan.html">
+                <i class="fa-solid fa-camera me-2"></i>
+                Scan Product
+            </a>
+
+            <a href="./work.html">
+                <i class="fa-solid fa-code-compare me-2"></i>
+                How It Works
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-book me-2"></i>
+                My Shelf
+            </a>
+
+            <a href="./about.html">
+                <i class="fa-solid fa-circle-info me-2"></i>
+                About Us
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ================= PAGE ================= -->
+
+    <div class="container-fluid p-0">
+
+        <div class="row g-0">
+
+
+            <!-- ================= SIDEBAR ================= -->
+
+            <aside class="sidebar d-none d-md-block">
+
+                <img src="./assets/Labellogo.png" class="logo" alt="LabelLense">
+
+
+                <a href="./index.html">
+                    <i class="fa-solid fa-house me-2"></i>
+                    Home
+                </a>
+
+
+                <a href="./scan.html">
+                    <i class="fa-solid fa-camera me-2"></i>
+                    Scan Product
+                </a>
+
+
+                <a href="./how_it_works.html">
+                    <i class="fa-solid fa-code-compare me-2"></i>
+                    How It Works
+                </a>
+
+
+                <a href="#">
+                    <i class="fa-solid fa-book me-2"></i>
+                    My Shelf
+                </a>
+
+
+                <a href="./about.html">
+                    <i class="fa-solid fa-circle-info me-2"></i>
+                    About Us
+                </a>
+
+            </aside>
+
+
+
+            <!-- ================= MAIN AREA ================= -->
+
+            <div class="main-area">
+
+
+                <!-- ================= MAIN CONTENT ================= -->
+
+                <main class="about-main">
+
+                    <div class="container-fluid about-page mb-5">
+                        <div class="row g-0 border border-dark rounded-4 p-4 mt-5 how-it-works-section">
+
+                            <!-- TITLE -->
+                            <div class="page-title text-center">
+                                How it Works
+                            </div>
+
+                            <p class="page-subtitle text-center mb-2">
+                                Simple. Smart. Powerful
+                            </p>
+
+
+                            <div class="steps-wrapper">
+
+                                <!-- ================= STEP BAR ================= -->
+                                <div class="step-bar d-none d-sm-flex">
+
+                                    <div class="circle one">1</div>
+
+                                    <div class="line line1"></div>
+
+                                    <div class="circle two">2</div>
+
+                                    <div class="line line2"></div>
+
+                                    <div class="circle three">3</div>
+
+                                    <div class="line line3"></div>
+
+                                    <div class="circle four">4</div>
+
+                                </div>
+
+
+                                <!-- ================= CARDS ================= -->
+                                <div class="cards-container">
+
+                                    <!-- STEP 1 -->
+                                    <div class="step-card">
+
+                                        <!-- Mobile number -->
+                                        <div class="circle one mobile-circle d-flex d-sm-none">
+                                            1
+                                        </div>
+
+                                        <div class="card card-one">
+
+                                            <div class="icon-box">
+                                                <i class="fa-solid fa-print"></i>
+                                            </div>
+
+                                            <p>Scan</p>
+
+                                            <small>
+                                                Upload or scan the<br class="desktop-break">
+                                                product label
+                                            </small>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- STEP 2 -->
+                                    <div class="step-card">
+
+                                        <!-- Mobile number -->
+                                        <div class="circle two mobile-circle d-flex d-sm-none">
+                                            2
+                                        </div>
+
+                                        <div class="card card-two">
+
+                                            <div class="icon-box">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </div>
+
+                                            <p>Analyze</p>
+
+                                            <small>
+                                                Our AI analyzes<br class="desktop-break">
+                                                ingredients and their impact
+                                            </small>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- STEP 3 -->
+                                    <div class="step-card">
+
+                                        <!-- Mobile number -->
+                                        <div class="circle three mobile-circle d-flex d-sm-none">
+                                            3
+                                        </div>
+
+                                        <div class="card card-three">
+
+                                            <div class="icon-box">
+                                                <i class="fa-solid fa-chart-column"></i>
+                                            </div>
+
+                                            <p>Report</p>
+
+                                            <small>
+                                                Receive a detailed<br class="desktop-break">
+                                                health report with easy insights
+                                            </small>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- STEP 4 -->
+                                    <div class="step-card">
+
+                                        <!-- Mobile number -->
+                                        <div class="circle four mobile-circle d-flex d-sm-none">
+                                            4
+                                        </div>
+
+                                        <div class="card card-four">
+
+                                            <div class="icon-box">
+                                                <i class="fa-solid fa-bookmark"></i>
+                                            </div>
+
+                                            <p>Save</p>
+
+                                            <small>
+                                                Save products to<br class="desktop-break">
+                                                My Shelf and track your choices
+                                            </small>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- ================= HOW IT WORKS BENEFITS ================= -->
+
+                        <div class="how-benefits">
+
+                            <!-- Trusted & Secure -->
+                            <div class="how-benefit-item">
+
+                                <div class="how-benefit-icon secure-icon">
+                                    <i class="fa-solid fa-shield"></i>
+                                </div>
+
+                                <div class="how-benefit-text">
+                                    <h2>Trusted &amp; Secure</h2>
+                                    <small>
+                                        Your data is safe and always private.
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <!-- AI Powered -->
+                            <div class="how-benefit-item">
+
+                                <div class="how-benefit-icon ai-icon">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+
+                                <div class="how-benefit-text">
+                                    <h2>AI Powered</h2>
+                                    <small>
+                                        Advanced AI to give you accurate insights.
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Health Focused -->
+                            <div class="how-benefit-item">
+
+                                <div class="how-benefit-icon health-icon">
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+
+                                <div class="how-benefit-text">
+                                    <h2>Health Focused</h2>
+                                    <small>
+                                        Helping you make better choices every day.
+                                    </small>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </main>
+
+
+
+                <!-- ================= FOOTER ================= -->
+
+                <footer class="footer">
+
+                    <div class="container-fluid px-4 px-lg-5 py-5">
+
+                        <div class="row gy-5">
+
+
+                            <!-- BRAND -->
+
+                            <div class="col-12 col-md-6 col-lg-3">
+
+                                <h3 class="footer-logo fw-bold mb-3">
+                                    LabelLense
+                                </h3>
+
+                                <p class="footer-text mb-4">
+                                    Empowering you to make smarter,
+                                    healthier choices with the power of AI.
+                                </p>
+
+                                <div class="social-icons d-flex gap-3">
+
+                                    <a href="#">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+
+                                    <a href="#">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
+
+                                    <a href="#">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PRODUCT -->
+
+                            <div class="col-6 col-md-6 col-lg-2">
+
+                                <h5 class="mb-4">
+                                    Product
+                                </h5>
+
+                                <ul class="list-unstyled d-flex flex-column gap-3">
+
+                                    <li><a href="#">Scan Product</a></li>
+                                    <li><a href="#">Compare</a></li>
+                                    <li><a href="#">My Shelf</a></li>
+                                    <li><a href="#">Dashboard</a></li>
+
+                                </ul>
+
+                            </div>
+
+
+
+                            <!-- COMPANY -->
+
+                            <div class="col-6 col-md-6 col-lg-2">
+
+                                <h5 class="mb-4">
+                                    Company
+                                </h5>
+
+                                <ul class="list-unstyled d-flex flex-column gap-3">
+
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Mission</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Careers</a></li>
+
+                                </ul>
+
+                            </div>
+
+
+
+                            <!-- SUPPORT -->
+
+                            <div class="col-6 col-md-6 col-lg-2">
+
+                                <h5 class="mb-4">
+                                    Support
+                                </h5>
+
+                                <ul class="list-unstyled d-flex flex-column gap-3">
+
+                                    <li><a href="#">Help Center</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="#">Terms</a></li>
+
+                                </ul>
+
+                            </div>
+
+
+
+                            <!-- NEWSLETTER -->
+
+                            <div class="col-12 col-lg-3">
+
+                                <h5 class="mb-3">
+                                    Stay Updated
+                                </h5>
+
+                                <p class="footer-text mb-4">
+                                    Get latest updates on AI insights.
+                                </p>
+
+                                <div class="input-group">
+
+                                    <input type="email" class="form-control footer-input"
+                                        placeholder="Enter your email">
+
+                                    <button class="btn btn-primary">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <hr class="my-4">
+
+
+                        <p class="copyright text-center mb-0">
+                            © 2026 LabelLense. All Rights Reserved.
+                        </p>
+
+                    </div>
+
+                </footer>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

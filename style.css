@@ -898,3 +898,73 @@ header {
     color: #626b7c;
     font-size: 0.65rem;
 }
+/* ===== REPORT PAGE POLISH ===== */
+
+/* Floating animation - product image aur score circle */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.health-circle {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+/* Score circle ke peeche soft glow */
+.health-circle {
+  box-shadow: 0 0 60px rgba(103, 228, 208, 0.25);
+}
+
+/* Header card ke peeche decorative glow blobs */
+.report-header-card {
+  position: relative;
+  overflow: hidden;
+}
+.report-header-card::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(124,58,237,0.22), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.report-header-card::after {
+  content: "";
+  position: absolute;
+  bottom: -100px;
+  left: -60px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(103,228,208,0.15), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.report-header-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Cards ke beech extra breathing space */
+.report-card, .nutrition-card, .nutrition-breakdown-card {
+  margin-bottom: 0.5rem;
+}
+
+/* Subtle hover lift on all cards */
+.report-card, .nutrition-card, .nutrition-breakdown-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.report-card:hover, .nutrition-card:hover, .nutrition-breakdown-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+/* AI icon ko zyada premium banao */
+.ai-icon {
+  background: linear-gradient(135deg, #7c3aed, #4adab3);
+  box-shadow: 0 0 20px rgba(124,58,237,0.4);
+}

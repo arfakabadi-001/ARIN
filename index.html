@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" data-bs-theme="">
+
+<head>
+    <title>LabelLense</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style2.css">
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="./label.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <!-- <style>
+        
+    </style> -->
+</head>
+
+<body class="body">
+
+    <main>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/Labellogo.png" class="logo" alt="">
+                    </a>
+                    <button class="navbar-toggler border-0 shadow-none" data-bs-toggle="collapse"
+                        data-bs-target="#navbarMenu">
+                        <i class="fa-solid fa-list fs-1 text-white"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./how_it_works.html">How it Works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My Shelf</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./about.html">About Us</a>
+                            </li>
+                        </ul>
+                        <a href="./scan.html" id="startScan" class="text-decoration-none btn-primary me-auto ms-5">
+                            Start Scanning
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="hero mt-5">
+            <div class="glow glow1"></div>
+            <div class="glow glow2"></div>
+            <div class="glow glow3"></div>
+
+            <div class="container">
+                <div class="row align-items-center ">
+                    <!-- LEFT -->
+                    <div class="col-lg-6">
+                        <span class="hero-badge mt-5">
+                            <i class="fa-solid fa-star"></i>
+                            AI Powered Product Analysis
+                        </span>
+                        <h1 class="hero-title">
+                            Know What's Really
+                            <span>Inside</span>
+                            Your Product.
+                        </h1>
+                        <p class="hero-desc">
+                            AI-powered product analysis for food, skincare, haircare and supplements. Understand
+                            ingredient instantly, get health scores, and make smarter buying decisions.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="./scan.html" id="startScan" class="text-decoration-none btn-secondary">
+                                Start Scanning
+                            </a>
+                            <a href="./about.html" class="text-decoration-none btn-secondary">
+                                Learn More
+                            </a>
+                        </div>
+
+                        <p class="users">
+                            Trusted by 12,000+ users worldwide
+                        </p>
+                    </div>
+                    <!-- RIGHT -->
+                    <div class="col-lg-6 text-center">
+                        <div class="hero-image">
+                            <img src="./assets/product.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 row justify-content-center gap-4 p-2">
+                    <div class="category-card col-lg-2">
+                        <div class="category-img">
+                            <img src="./assets/food.jpg.jpeg">
+                        </div>
+                        <span>Food</span>
+                    </div>
+                    <div class="category-card col-lg-2">
+                        <div class="category-img">
+                            <img src="./assets/skincare.jpg.jpeg" style="width: 50px;">
+                        </div>
+                        <span>Skincare</span>
+                    </div>
+                    <div class="category-card col-lg-2">
+                        <div class="category-img">
+                            <img src="./assets/haircare.jpg.jpeg">
+                        </div>
+                        <span>Haircare</span>
+                    </div>
+                    <div class="category-card col-lg-2">
+                        <div class="category-img">
+                            <img src="./assets/supplementsjpg.jpg.jpeg" style="width: 60px;">
+                        </div>
+                        <span>Supplements</span>
+                    </div>
+                </div>
+                <div class="stats row g-0 border border-dark rounded-4 p-4 mt-5">
+
+                    <div class="stat-card col-12 col-sm-6 col-lg-3">
+                        <div class="stat-content">
+                            <div class="icon">
+                                <i class="fa-solid fa-bag-shopping fs-3"></i>
+                            </div>
+
+                            <div>
+                                <h2>25K+</h2>
+                                <small>Products Analyzed</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card col-12 col-sm-6 col-lg-3">
+                        <div class="stat-content">
+                            <div class="icon">
+                                <i class="fa-regular fa-user fs-3"></i>
+                            </div>
+
+                            <div>
+                                <h2>12K+</h2>
+                                <small>Happy Users</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card col-12 col-sm-6 col-lg-3">
+                        <div class="stat-content">
+                            <div class="icon">
+                                <i class="fa-regular fa-square-check fs-3"></i>
+                            </div>
+
+                            <div>
+                                <h2>98.7%</h2>
+                                <small>Accuracy Rate</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card col-12 col-sm-6 col-lg-3">
+                        <div class="stat-content">
+                            <div class="icon">
+                                <i class="fa-solid fa-star fs-3"></i>
+                            </div>
+
+                            <div>
+                                <h2>4.8/5</h2>
+                                <small>User Ratings</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row features-section">
+
+                    <div class="col-12 text-center">
+                        <h1 class="page-title">
+                            Everything You Need to<br>
+                            Make Better Choices
+                        </h1>
+
+                        <p class="page-subtitle">
+                            Powerful tools that help you understand what you're really buying.
+                        </p>
+                    </div>
+
+
+                    <div class="features-container">
+
+                        <!-- Feature 1 -->
+                        <div class="need">
+
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-chart-line "></i>
+                            </div>
+
+                            <div class="feature-content">
+                                <h4>Health Score</h4>
+
+                                <p>
+                                    Understand how healthy a product is
+                                    with a simple, easy-to-read score.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Feature 2 -->
+                        <div class="need">
+
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-flask"></i>
+                            </div>
+
+                            <div class="feature-content">
+                                <h4>Ingredient Analysis</h4>
+
+                                <p>
+                                    Understand complex ingredients
+                                    using AI-powered analysis.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Feature 3 -->
+                        <div class="need">
+
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+
+                            <div class="feature-content">
+                                <h4>Smart Recommendations</h4>
+
+                                <p>
+                                    Get personalised insights based
+                                    on your lifestyle and goals.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Feature 4 -->
+                        <div class="need">
+
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+
+                            <div class="feature-content">
+                                <h4>My Shelf</h4>
+
+                                <p>
+                                    Keep your scanned products and
+                                    reports organised in one place.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer py-5 w-100">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-logo fw-bold mb-3">
+                        LabelLense
+                    </h3>
+                    <p class="footer-text mb-4">
+                        Empowering you to make smarter, healthier choices with the power of AI.
+                    </p>
+                    <div class="social-icons d-flex gap-3">
+                        <a href="#">
+                            <i class="bi bi-facebook fs-5"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-twitter-x fs-5"></i>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-instagram fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Product</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li>
+                            <a href="#">Scan Product</a>
+                        </li>
+                        <li>
+                            <a href="#">Compare</a>
+                        </li>
+                        <li>
+                            <a href="#">My Shelf</a>
+                        </li>
+                        <li>
+                            <a href="#">Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Company</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Mission</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Support</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li>
+                            <a href="#">Help Center</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <h5 class="mb-3">Stay Updated</h5>
+                    <p class="footer-text mb-4">
+                        Get latest updates on AI insights.
+                    </p>
+                    <div class="input-group">
+                        <input class="form-control footer-input" placeholder="Enter your email">
+                        <button class="btn btn-primary">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-2">
+            <div class="text-center">
+                <p class="copyright mb-0">
+                    © 2026 LabelLense. All Rights Reserved.
+                </p>
+
+
+            </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <script>
+            let scan=document.getElementById("startScan");
+            scan.addEventListener("click",()=>{
+                  window.location = "./scan.html";
+            })
+        </script>
+</body>
+
+</html>
