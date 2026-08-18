@@ -5,3 +5,43 @@
 }
     
 }
+@media (max-width: 767.98px) {
+  .report-header-card {
+    padding: 1.25rem;
+  }
+
+  .product-info h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .product-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .product-image {
+    width: 70px;
+    height: 90px;
+  }
+
+  .health-circle {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+  }
+
+  .inner-circle {
+    width: 105px;
+    height: 105px;
+  }
+
+  .score {
+    font-size: 2.5rem;
+  }
+
+  .report-chip {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}

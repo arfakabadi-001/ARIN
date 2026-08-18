@@ -9,15 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- Your CSS -->
-    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="style2.css">
 
 </head>
 
@@ -29,13 +27,9 @@
 
     <nav class="mobile-nav d-md-none d-flex justify-content-between align-items-center">
 
-        <img src="./assets/Labellogo.png"
-            class="logo mb-0"
-            alt="LabelLense">
+        <img src="./assets/Labellogo.png" class="logo mb-0" alt="LabelLense">
 
-        <button class="btn text-white"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#mobileSidebar">
+        <button class="btn text-white" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
 
             <i class="fa-solid fa-bars fs-3"></i>
 
@@ -47,18 +41,13 @@
 
     <!-- ================= MOBILE OFFCANVAS ================= -->
 
-    <div class="offcanvas offcanvas-start"
-        tabindex="-1"
-        id="mobileSidebar">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
 
         <div class="offcanvas-header">
 
-            <img src="./assets/Labellogo.png"
-                width="150"
-                alt="LabelLense">
+            <img src="./assets/Labellogo.png" width="150" alt="LabelLense">
 
-            <button class="btn-close"
-                data-bs-dismiss="offcanvas">
+            <button class="btn-close" data-bs-dismiss="offcanvas">
             </button>
 
         </div>
@@ -71,12 +60,12 @@
                 Home
             </a>
 
-            <a href="./scan.html">
+            <a href="#">
                 <i class="fa-solid fa-camera me-2"></i>
                 Scan Product
             </a>
 
-            <a href="./how_it_works.html">
+            <a href="./work.html">
                 <i class="fa-solid fa-code-compare me-2"></i>
                 How It Works
             </a>
@@ -106,10 +95,9 @@
 
             <!-- ================= SIDEBAR ================= -->
 
-<aside class="sidebar sidebar-fixed d-none d-md-block">
-                <img src="./assets/Labellogo.png"
-                    class="logo"
-                    alt="LabelLense">
+            <aside class="sidebar d-none d-md-block">
+
+                <img src="./assets/Labellogo.png" class="logo" alt="LabelLense">
 
 
                 <a href="./index.html">
@@ -118,13 +106,13 @@
                 </a>
 
 
-                <a href="./scan.html">
+                <a href="#">
                     <i class="fa-solid fa-camera me-2"></i>
                     Scan Product
                 </a>
 
 
-                <a href="./how_it_works.html">
+                <a href="./work.html">
                     <i class="fa-solid fa-code-compare me-2"></i>
                     How It Works
                 </a>
@@ -154,190 +142,130 @@
 
                 <main class="about-main">
 
-                    <div class="container-fluid about-page">
+                    <div class="container-fluid about-page mb-5">
+                        <div class="row g-0 border border-dark rounded-4 p-4 mt-5">
+
+                            <!-- TITLE -->
+                            <p class="page-title">My Shelf</p>
+                            <div class="shelf-header">
+                                <p class="page-subtitle">
+                                    All your scanned products and reports in one place
+                                </p>
+                                <div class="input-group shelf-search">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Search products..">
+                                </div>
+                            </div>
+                            <div class="shelf-filters mb-5">
+                                <button class="shelf-filter active">
+                                    All
+                                </button>
+
+                                <button class="shelf-filter">
+                                    Food &amp; Beverages
+                                </button>
+
+                                <button class="shelf-filter">
+                                    Skin Care
+                                </button>
+
+                                <button class="shelf-filter">
+                                    Medicines
+                                </button>
+                            </div>
+
+                            <!-- PRODUCT 1 -->
+                            <div class="shelf-product mb-4">
+
+                                <div class="product-image">
+                                    <img src="./assets/haircare.jpg" alt="Fresh Orange Juice">
+                                </div>
+
+                                <div class="product-info">
+
+                                    <h3>Aleovera Shampoo</h3>
+
+                                    <p class="product-category">
+                                        Hair Care
+                                    </p>
+
+                                    <small>
+                                        Scanned on August 18, 2026
+                                    </small>
+
+                                </div>
 
 
-                        <!-- HERO -->
+                                <!-- SCORE -->
+                                <div class="product-score good-score" style="--score: 86%;">
 
-                        <section class="about-hero">
-
-                            <div class="row align-items-center">
-
-
-                                <!-- LEFT -->
-
-                                <div class="col-12 col-lg-6">
-
-                                    <div class="about-text">
-
-                                        <span class="about-label fs-1">
-                                            ABOUT LABEL LENSE
-                                        </span>
-
-                                        <p class="about-desc mt-3">
-                                            We are on a mission to empower people
-                                            with the knowledge to make smarter and
-                                            healthier choices.
-                                        </p>
-
-
-                                        <div class="about-users mt-4 d-flex align-items-center">
-
-                                            <div class="about-user-icon me-3">
-
-                                                <i class="fa-solid fa-users"></i>
-
-                                            </div>
-
-
-                                            <div>
-
-                                                <h5 class="mb-0">
-                                                    12,000+
-                                                </h5>
-
-                                                <small>
-                                                    Trusted users worldwide
-                                                </small>
-
-                                            </div>
-
-                                        </div>
-
+                                    <div class="score-inner">
+                                        <strong>8.6</strong>
+                                        <span>Good</span>
                                     </div>
 
                                 </div>
 
 
+                                <button class="view-report">
+                                    View Report
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
 
-                                <!-- RIGHT -->
-
-                                <div class="col-12 col-lg-6">
-
-                                    <div class="about-image mt-5">
-
-                                        <img src="./assets/About.png"
-                                            class="img-fluid"
-                                            alt="LabelLense AI product analysis">
-
-                                    </div>
-
-                                </div>
+                                <button class="delete-product">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
 
                             </div>
 
-                        </section>
+
+                            <!-- PRODUCT 2 -->
+                            <div class="shelf-product">
+
+                                <div class="product-image">
+                                    <img src="./assets/supplementsjpg.jpg" alt="Chocolate Cookies">
+                                </div>
+
+                                <div class="product-info">
+
+                                    <h3>Anti-Biotics</h3>
+
+                                    <p class="product-category">
+                                       Health &amp; Medicines
+                                    </p>
+
+                                    <small>
+                                        Scanned on August 17, 2026
+                                    </small>
+
+                                </div>
 
 
+                                <!-- SCORE -->
+                                <div class="product-score average-score" style="--score: 52%;">
 
-                        <!-- FEATURES -->
-
-                        <section class="about-features mb-5">
-
-                            <div class="row g-3">
-
-
-                                <!-- MISSION -->
-
-                                <div class="col-12 col-sm-6 col-xl-3">
-
-                                    <div class="about-feature h-100">
-
-                                        <div class="about-feature-icon">
-                                            <i class="fa-solid fa-shield-halved"></i>
-                                        </div>
-
-                                        <h5>
-                                            Our Mission
-                                        </h5>
-
-                                        <p>
-                                            To make product information transparent
-                                            and easy to understand for everyone.
-                                        </p>
-
+                                    <div class="score-inner">
+                                        <strong>5.2</strong>
+                                        <span>Moderate</span>
                                     </div>
 
                                 </div>
 
 
+                                <button class="view-report">
+                                    View Report
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
 
-                                <!-- VISION -->
-
-                                <div class="col-12 col-sm-6 col-xl-3">
-
-                                    <div class="about-feature h-100">
-
-                                        <div class="about-feature-icon">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </div>
-
-                                        <h5>
-                                            Our Vision
-                                        </h5>
-
-                                        <p>
-                                            A world where every product is understood
-                                            and every choice is informed.
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-
-
-                                <!-- TECHNOLOGY -->
-
-                                <div class="col-12 col-sm-6 col-xl-3">
-
-                                    <div class="about-feature h-100">
-
-                                        <div class="about-feature-icon">
-                                            <i class="fa-solid fa-microchip"></i>
-                                        </div>
-
-                                        <h5>
-                                            Technology Stack
-                                        </h5>
-
-                                        <p>
-                                            AI-powered technology that transforms
-                                            complex labels into simple insights.
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-
-
-                                <!-- TEAM -->
-
-                                <div class="col-12 col-sm-6 col-xl-3">
-
-                                    <div class="about-feature h-100">
-
-                                        <div class="about-feature-icon">
-                                            <i class="fa-solid fa-people-group"></i>
-                                        </div>
-
-                                        <h5>
-                                            Our Team
-                                        </h5>
-
-                                        <p>
-                                            Passionate creators, designers and AI
-                                            enthusiasts building for better choices.
-                                        </p>
-
-                                    </div>
-
-                                </div>
+                                <button class="delete-product">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
 
                             </div>
 
-                        </section>
+                        </div>
 
                     </div>
 
@@ -464,8 +392,7 @@
 
                                 <div class="input-group">
 
-                                    <input type="email"
-                                        class="form-control footer-input"
+                                    <input type="email" class="form-control footer-input"
                                         placeholder="Enter your email">
 
                                     <button class="btn btn-primary">
