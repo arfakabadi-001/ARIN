@@ -53,8 +53,7 @@ document.getElementById("ingredientRows").innerHTML = data.ingredients.map(ing =
         </div>
     </div>
 `).join("");
-// Product image
-document.getElementById("productImage").src = "https://placehold.co/150x150/1a1a2e/4adab3?text=" + encodeURIComponent(data.product.name.split(" ")[0] || "Product");
+
 
 // Score breakdown
 document.getElementById("scoreBreakdown").innerHTML = data.score_breakdown.map(s => `
@@ -64,15 +63,30 @@ document.getElementById("scoreBreakdown").innerHTML = data.score_breakdown.map(s
     </div>
 `).join("");
 // Health score ring ko dynamically fill karo
+// Health score ring — color range ke hisaab se badalta hai
 const score = data.health_score;
 const fillDeg = (score / 100) * 360;
-const tipEnd = Math.min(360, fillDeg + 6); // chhota purple accent tip
+
+let ringColor;
+if (score < 50) ringColor = "#e5484d";       // red - risky
+else if (score < 80) ringColor = "#f5c04a";  // yellow - moderate
+else ringColor = "#2f8a5e";                  // green - safe
 
 document.querySelector(".health-circle").style.background = `conic-gradient(
-    #67e4d0 0deg ${fillDeg}deg,
-    #7c3aed ${fillDeg}deg ${tipEnd}deg,
-    #1d2235 ${tipEnd}deg 360deg
+    ${ringColor} 0deg ${fillDeg}deg,
+    #1d2235 ${fillDeg}deg 360deg
 )`;
+
+// "Good Choice" text bhi color ke hisaab se badlo
+const scoreLabel = document.querySelector(".health-circle").closest(".col-lg-4").querySelector(".text-success");
+if (scoreLabel) {
+    const labels = { red: "Risky Choice", yellow: "Moderate Choice", green: "Good Choice" };
+    const key = score < 50 ? "red" : score < 80 ? "yellow" : "green";
+    scoreLabel.innerText = labels[key];
+    scoreLabel.className = score < 50 ? "text-danger fw-semibold" : score < 80 ? "text-warning fw-semibold" : "text-success fw-semibold";
+    scoreLabel.previousElementSibling ? null : null; // icon change optional
+}
+
 // Claims verification
 if (data.claims_check && data.claims_check.length > 0) {
     document.getElementById("claimsCard").style.display = "block";
