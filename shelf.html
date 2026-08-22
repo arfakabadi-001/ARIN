@@ -1,436 +1,264 @@
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
-
-<head>
-
+  <head>
     <title>About LabelLense</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
     <!-- Your CSS -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style2.css" />
+  </head>
 
-</head>
-
-
-<body>
-
-
+  <body>
     <!-- ================= MOBILE NAVBAR ================= -->
 
-    <nav class="mobile-nav d-md-none d-flex justify-content-between align-items-center">
+    <nav
+      class="mobile-nav d-md-none d-flex justify-content-between align-items-center"
+    >
+      <img src="./assets/Labellogo.png" class="logo mb-0" alt="LabelLense" />
 
-        <img src="./assets/Labellogo.png" class="logo mb-0" alt="LabelLense">
-
-        <button class="btn text-white" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
-
-            <i class="fa-solid fa-bars fs-3"></i>
-
-        </button>
-
+      <button
+        class="btn text-white"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileSidebar"
+      >
+        <i class="fa-solid fa-bars fs-3"></i>
+      </button>
     </nav>
-
-
 
     <!-- ================= MOBILE OFFCANVAS ================= -->
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
+      <div class="offcanvas-header">
+        <img src="./assets/Labellogo.png" width="150" alt="LabelLense" />
 
-        <div class="offcanvas-header">
+        <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
 
-            <img src="./assets/Labellogo.png" width="150" alt="LabelLense">
+      <div class="offcanvas-body">
+        <a href="./index.html">
+          <i class="fa-solid fa-house me-2"></i>
+          Home
+        </a>
 
-            <button class="btn-close" data-bs-dismiss="offcanvas">
-            </button>
+        <a href="./scan.html">
+          <i class="fa-solid fa-camera me-2"></i>
+          Scan Product
+        </a>
 
-        </div>
+        <a href="./work.html">
+          <i class="fa-solid fa-code-compare me-2"></i>
+          How It Works
+        </a>
 
+        <a href="./shelf.html">
+          <i class="fa-solid fa-book me-2"></i>
+          My Shelf
+        </a>
 
-        <div class="offcanvas-body">
-
-            <a href="./index.html">
-                <i class="fa-solid fa-house me-2"></i>
-                Home
-            </a>
-
-            <a href="./scan.html">
-                <i class="fa-solid fa-camera me-2"></i>
-                Scan Product
-            </a>
-
-            <a href="./work.html">
-                <i class="fa-solid fa-code-compare me-2"></i>
-                How It Works
-            </a>
-
-            <a href="./shelf.html">
-                <i class="fa-solid fa-book me-2"></i>
-                My Shelf
-            </a>
-
-            <a href="./about.html">
-                <i class="fa-solid fa-circle-info me-2"></i>
-                About Us
-            </a>
-
-        </div>
-
+        <a href="./about.html">
+          <i class="fa-solid fa-circle-info me-2"></i>
+          About Us
+        </a>
+      </div>
     </div>
-
-
 
     <!-- ================= PAGE ================= -->
 
     <div class="container-fluid p-0">
-
-        <div class="row g-0">
-
-
-            <!-- ================= SIDEBAR ================= -->
-
-            <aside class="sidebar d-none d-md-block">
-
-                <img src="./assets/Labellogo.png" class="logo" alt="LabelLense">
-
-
-                <a href="./index.html">
-                    <i class="fa-solid fa-house me-2"></i>
-                    Home
-                </a>
-
-
-                <a href="./scan.html">
-                    <i class="fa-solid fa-camera me-2"></i>
-                    Scan Product
-                </a>
-
-
-                <a href="./how_it_works.html">
-                    <i class="fa-solid fa-code-compare me-2"></i>
-                    How It Works
-                </a>
-
-
-                <a href="./shelf.html">
-                    <i class="fa-solid fa-book me-2"></i>
-                    My Shelf
-                </a>
-
-
-                <a href="./about.html">
-                    <i class="fa-solid fa-circle-info me-2"></i>
-                    About Us
-                </a>
-
-            </aside>
-
-
-
-            <!-- ================= MAIN AREA ================= -->
-
-            <div class="main-area">
-
-
-                <!-- ================= MAIN CONTENT ================= -->
-
-                <main class="about-main">
-
-                    <div class="container-fluid about-page mb-5">
-                        <div class="row g-0 border border-dark rounded-4 p-4 mt-5">
-
-                            <!-- TITLE -->
-                            <p class="page-title">My Shelf</p>
-                            <div class="shelf-header">
-                                <p class="page-subtitle">
-                                    All your scanned products and reports in one place
-                                </p>
-                                <div class="input-group shelf-search">
-                                    <span class="input-group-text">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </span>
-                                    <input type="text" class="form-control" placeholder="Search products..">
-                                </div>
-                            </div>
-                            <div class="shelf-filters mb-5">
-                                <button class="shelf-filter active">
-                                    All
-                                </button>
-
-                                <button class="shelf-filter">
-                                    Food &amp; Beverages
-                                </button>
-
-                                <button class="shelf-filter">
-                                    Skin Care
-                                </button>
-
-                                <button class="shelf-filter">
-                                    Medicines
-                                </button>
-                            </div>
-
-                            <!-- PRODUCT 1 -->
-                            <div class="shelf-product mb-4">
-
-                                <div class="product-image">
-                                    <img src="./assets/haircare.jpg.jpeg" alt="Fresh Orange Juice">
-                                </div>
-
-                                <div class="product-info">
-
-                                    <h3>Aleovera Shampoo</h3>
-
-                                    <p class="product-category">
-                                        Hair Care
-                                    </p>
-
-                                    <small>
-                                        Scanned on August 18, 2026
-                                    </small>
-
-                                </div>
-
-
-                                <!-- SCORE -->
-                                <div class="product-score good-score" style="--score: 86%;">
-
-                                    <div class="score-inner">
-                                        <strong>8.6</strong>
-                                        <span>Good</span>
-                                    </div>
-
-                                </div>
-
-
-                                <button class="view-report">
-                                    View Report
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-
-                                <button class="delete-product">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-
-                            </div>
-
-
-                            <!-- PRODUCT 2 -->
-                            <div class="shelf-product">
-
-                                <div class="product-image">
-                                    <img src="./assets/supplementsjpg.jpg.jpeg" alt="Chocolate Cookies">
-                                </div>
-
-                                <div class="product-info">
-
-                                    <h3>Anti-Biotics</h3>
-
-                                    <p class="product-category">
-                                       Health &amp; Medicines
-                                    </p>
-
-                                    <small>
-                                        Scanned on August 17, 2026
-                                    </small>
-
-                                </div>
-
-
-                                <!-- SCORE -->
-                                <div class="product-score average-score" style="--score: 52%;">
-
-                                    <div class="score-inner">
-                                        <strong>5.2</strong>
-                                        <span>Moderate</span>
-                                    </div>
-
-                                </div>
-
-
-                                <button class="view-report">
-                                    View Report
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </button>
-
-                                <button class="delete-product">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </main>
-
-
-
-                <!-- ================= FOOTER ================= -->
-
-                <footer class="footer">
-
-                    <div class="container-fluid px-4 px-lg-5 py-5">
-
-                        <div class="row gy-5">
-
-
-                            <!-- BRAND -->
-
-                            <div class="col-12 col-md-6 col-lg-3">
-
-                                <h3 class="footer-logo fw-bold mb-3">
-                                    LabelLense
-                                </h3>
-
-                                <p class="footer-text mb-4">
-                                    Empowering you to make smarter,
-                                    healthier choices with the power of AI.
-                                </p>
-
-                                <div class="social-icons d-flex gap-3">
-
-                                    <a href="#">
-                                        <i class="fa-brands fa-facebook"></i>
-                                    </a>
-
-                                    <a href="#">
-                                        <i class="fa-brands fa-x-twitter"></i>
-                                    </a>
-
-                                    <a href="#">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- PRODUCT -->
-
-                            <div class="col-6 col-md-6 col-lg-2">
-
-                                <h5 class="mb-4">
-                                    Product
-                                </h5>
-
-                                <ul class="list-unstyled d-flex flex-column gap-3">
-
-                                    <li><a href="#">Scan Product</a></li>
-                                    <li><a href="#">Compare</a></li>
-                                    <li><a href="#">My Shelf</a></li>
-                                    <li><a href="#">Dashboard</a></li>
-
-                                </ul>
-
-                            </div>
-
-
-
-                            <!-- COMPANY -->
-
-                            <div class="col-6 col-md-6 col-lg-2">
-
-                                <h5 class="mb-4">
-                                    Company
-                                </h5>
-
-                                <ul class="list-unstyled d-flex flex-column gap-3">
-
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Mission</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Careers</a></li>
-
-                                </ul>
-
-                            </div>
-
-
-
-                            <!-- SUPPORT -->
-
-                            <div class="col-6 col-md-6 col-lg-2">
-
-                                <h5 class="mb-4">
-                                    Support
-                                </h5>
-
-                                <ul class="list-unstyled d-flex flex-column gap-3">
-
-                                    <li><a href="#">Help Center</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Terms</a></li>
-
-                                </ul>
-
-                            </div>
-
-
-
-                            <!-- NEWSLETTER -->
-
-                            <div class="col-12 col-lg-3">
-
-                                <h5 class="mb-3">
-                                    Stay Updated
-                                </h5>
-
-                                <p class="footer-text mb-4">
-                                    Get latest updates on AI insights.
-                                </p>
-
-                                <div class="input-group">
-
-                                    <input type="email" class="form-control footer-input"
-                                        placeholder="Enter your email">
-
-                                    <button class="btn btn-primary">
-                                        <i class="fa-solid fa-paper-plane"></i>
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <hr class="my-4">
-
-
-                        <p class="copyright text-center mb-0">
-                            © 2026 LabelLense. All Rights Reserved.
-                        </p>
-
-                    </div>
-
-                </footer>
-
-
+      <div class="row g-0">
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar d-none d-md-block">
+          <img src="./assets/Labellogo.png" class="logo" alt="LabelLense" />
+
+          <a href="./index.html">
+            <i class="fa-solid fa-house me-2"></i>
+            Home
+          </a>
+
+          <a href="./scan.html">
+            <i class="fa-solid fa-camera me-2"></i>
+            Scan Product
+          </a>
+
+          <a href="./how_it_works.html">
+            <i class="fa-solid fa-code-compare me-2"></i>
+            How It Works
+          </a>
+
+          <a href="./shelf.html">
+            <i class="fa-solid fa-book me-2"></i>
+            My Shelf
+          </a>
+
+          <a href="./about.html">
+            <i class="fa-solid fa-circle-info me-2"></i>
+            About Us
+          </a>
+        </aside>
+
+        <!-- ================= MAIN AREA ================= -->
+
+        <div class="main-area">
+          <!-- ================= MAIN CONTENT ================= -->
+
+          <main class="about-main">
+            <div class="container-fluid about-page mb-5">
+              <div class="row g-0 border border-dark rounded-4 p-4 mt-5">
+                <!-- TITLE -->
+                <p class="page-title">My Shelf</p>
+                <div class="shelf-header">
+                  <p class="page-subtitle">
+                    All your scanned products and reports in one place
+                  </p>
+                  <div class="input-group shelf-search">
+                    <span class="input-group-text">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search products.."
+                    />
+                  </div>
+                </div>
+                <div class="shelf-filters mb-5">
+                  <button class="shelf-filter active">All</button>
+
+                  <button class="shelf-filter">Food &amp; Beverages</button>
+
+                  <button class="shelf-filter">Skin Care</button>
+
+                  <button class="shelf-filter">Medicines</button>
+                </div>
+
+                <!-- PRODUCT 1 -->
+
+                <!-- PRODUCT 2 -->
+               
+              </div>
             </div>
+          </main>
 
+          <!-- ================= FOOTER ================= -->
+
+          <footer class="footer">
+            <div class="container-fluid px-4 px-lg-5 py-5">
+              <div class="row gy-5">
+                <!-- BRAND -->
+
+                <div class="col-12 col-md-6 col-lg-3">
+                  <h3 class="footer-logo fw-bold mb-3">LabelLense</h3>
+
+                  <p class="footer-text mb-4">
+                    Empowering you to make smarter, healthier choices with the
+                    power of AI.
+                  </p>
+
+                  <div class="social-icons d-flex gap-3">
+                    <a href="#">
+                      <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                      <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- PRODUCT -->
+
+                <div class="col-6 col-md-6 col-lg-2">
+                  <h5 class="mb-4">Product</h5>
+
+                  <ul class="list-unstyled d-flex flex-column gap-3">
+                    <li><a href="#">Scan Product</a></li>
+                    <li><a href="#">Compare</a></li>
+                    <li><a href="#">My Shelf</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                  </ul>
+                </div>
+
+                <!-- COMPANY -->
+
+                <div class="col-6 col-md-6 col-lg-2">
+                  <h5 class="mb-4">Company</h5>
+
+                  <ul class="list-unstyled d-flex flex-column gap-3">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                  </ul>
+                </div>
+
+                <!-- SUPPORT -->
+
+                <div class="col-6 col-md-6 col-lg-2">
+                  <h5 class="mb-4">Support</h5>
+
+                  <ul class="list-unstyled d-flex flex-column gap-3">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                  </ul>
+                </div>
+
+                <!-- NEWSLETTER -->
+
+                <div class="col-12 col-lg-3">
+                  <h5 class="mb-3">Stay Updated</h5>
+
+                  <p class="footer-text mb-4">
+                    Get latest updates on AI insights.
+                  </p>
+
+                  <div class="input-group">
+                    <input
+                      type="email"
+                      class="form-control footer-input"
+                      placeholder="Enter your email"
+                    />
+
+                    <button class="btn btn-primary">
+                      <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="my-4" />
+
+              <p class="copyright text-center mb-0">
+                © 2026 LabelLense. All Rights Reserved.
+              </p>
+            </div>
+          </footer>
         </div>
-
+      </div>
     </div>
 
-
-
     <!-- Bootstrap JS -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-</body>
-
+    <script src="./script/shelf.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

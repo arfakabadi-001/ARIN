@@ -5,6 +5,9 @@ let animationDone = false;
 let backendDone = false;
 let reportData = null;
 
+// Current scan ki image ko local variable mein capture kar lo taaki overwrite na ho
+const currentScanImage = sessionStorage.getItem("scanImageForAnalysis");
+
 let timer = setInterval(() => {
     if (count >= 100) {
         clearInterval(timer);
@@ -41,10 +44,8 @@ let timer = setInterval(() => {
     }
 }, 100);
 
-// Backend call — animation ke saath parallel chalta hai
-const base64Image = sessionStorage.getItem("scanImageForAnalysis");
-
-fetch(base64Image)
+// Fetch analysis from backend using the captured image
+fetch(currentScanImage)
     .then(res => res.blob())
     .then(blob => {
         const formData = new FormData();
@@ -65,7 +66,30 @@ fetch(base64Image)
 
 function tryRedirect() {
     if (animationDone && backendDone) {
+        // 1. Pass the exact image captured during this specific scan session
+        saveProductToShelf(reportData, currentScanImage);
+
+        // 2. Set the product report for display
         sessionStorage.setItem("scanResult", JSON.stringify(reportData));
         window.location = "./product.html";
+    } else if (animationDone && !backendDone) {
+        percentage.innerText = "Almost there...";
+        percentage.style.fontSize = "30px";
     }
+}
+
+function saveProductToShelf(data, imageBase64) {
+    let shelfItems = JSON.parse(localStorage.getItem('labelLenseShelf')) || [];
+    
+    const actualReport = data.report || data;
+
+    const newProduct = {
+        id: Date.now(),
+        image: imageBase64, // Har product ke sath uski apni original base64 image save hogi
+        date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }),
+        report: actualReport
+    };
+
+    shelfItems.unshift(newProduct);
+    localStorage.setItem('labelLenseShelf', JSON.stringify(shelfItems));
 }
