@@ -209,7 +209,9 @@ HERO
   bottom: -120px;
   opacity: 0.12;
 }
-
+/* .beverage-img {
+  mix-blend-mode: multiply;
+} */
 .category-card {
   background: #071432fa;
   /* or var(--plain-card) */
@@ -235,7 +237,8 @@ HERO
 }
 
 .category-img img {
-  width: 30px;
+  width: 50px;
+  height: 100%;
   position: relative;
   z-index: 1;
   object-fit: contain;
