@@ -1,0 +1,6 @@
+flask
+flask-cors
+pytesseract
+pillow
+google-genai
+groq
