@@ -50,7 +50,7 @@ fetch(currentScanImage)
     .then(blob => {
         const formData = new FormData();
         formData.append("image", blob, "scan.jpg");
-        return fetch("http://127.0.0.1:5000/analyze", { method: "POST", body: formData });
+        return fetch("https://labellense-1.onrender.com", { method: "POST", body: formData });
     })
     .then(response => response.json())
     .then(data => {
