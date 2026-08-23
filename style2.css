@@ -51,7 +51,7 @@ NAVBAR
   background: rgba(8, 15, 25, 0.35);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 16px 0;
+  padding: 0px 0;
   /* width: 100%; */
 }
 .custom-navbar .logo {
