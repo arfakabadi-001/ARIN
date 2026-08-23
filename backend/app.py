@@ -93,13 +93,16 @@ def analyze_with_groq(pil_image):
 # ============================================================
 # ROUTE
 # ============================================================
+@app.route("/")
+def home():
+    return "LabelLense backend is awake!"
 
 @app.route("/analyze", methods=["POST"])
 def analyze():
     # 1. Image memory me padho (disk pe save nahi karna, fast hai)
     image_bytes = request.files["image"].read()
     pil_image = Image.open(io.BytesIO(image_bytes))
-    pil_image.thumbnail((450, 450))  # chhota karo, AI ko fast process karne ke liye
+    pil_image.thumbnail((400, 400))  # chhota karo, AI ko fast process karne ke liye
 
     # 2. Cache check — same image dobara aaye to seedha purana result do
     image_hash = hashlib.md5(image_bytes).hexdigest()
