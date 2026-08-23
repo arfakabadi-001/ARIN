@@ -33,7 +33,7 @@ Avoid textbook language. Return ONLY valid JSON matching the exact requested sch
 STRICT SCORING RULES:
 - Start at 100. Deduct points via score_breakdown (negative numbers only):
 - Sugar >15g: -25; 5-15g: -15.
-- Sodium >400mg: -25; 140-400mg: -15.
+- Sodium >400mg: -25; 200-400mg: -15.
 - Refined Flour/Palm Oil/Sat Fat: -15 each.
 - Additives (INS, MSG, etc): -10 each (max -30).
 - Clean products: [{"factor": "No Concerns", "points": 0, "reason": "Clean ingredients"}]
