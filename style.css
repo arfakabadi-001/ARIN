@@ -31,6 +31,17 @@
   padding: 0;
   /* overflow-x: hidden; */
 }
+html {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overflow-x: hidden;
+}
 .btn-primary {
   background: var(--accent-cyan);
   transition: 0.3s ease;

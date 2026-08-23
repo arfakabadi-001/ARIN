@@ -32,6 +32,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overflow-x: hidden;
+}
 
 .body {
   background: var(--bg-main);
