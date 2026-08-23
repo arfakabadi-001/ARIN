@@ -3,10 +3,6 @@
 // aur unhe cards ki tarah dikhao
 // ============================================================
 
-document.addEventListener("DOMContentLoaded", () => {
-    loadShelfProducts();
-});
-
 
 // Step 1: localStorage se saare saved products laao
 function getSavedProducts() {
@@ -100,3 +96,43 @@ function viewSavedReport(id) {
 
     window.location.href = './product.html';
 }
+// Search box se products filter karo
+function setupSearch() {
+    const searchInput = document.querySelector(".shelf-search input");
+    if (!searchInput) return;
+    searchInput.addEventListener("input", filterShelfProducts);
+}
+
+// Category buttons (All / Food & Beverages / etc.) se filter karo
+function setupCategoryFilters() {
+    const filterButtons = document.querySelectorAll(".shelf-filter");
+    filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            filterButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            filterShelfProducts();
+        });
+    });
+}
+
+// Search text + selected category dono ke hisaab se cards show/hide karo
+function filterShelfProducts() {
+    const searchTerm = document.querySelector(".shelf-search input")?.value.toLowerCase() || "";
+    const activeBtn = document.querySelector(".shelf-filter.active");
+    const activeCategory = activeBtn ? activeBtn.innerText.trim() : "All";
+
+    document.querySelectorAll(".shelf-product").forEach(card => {
+        const name = card.querySelector(".product-info h3")?.innerText.toLowerCase() || "";
+        const category = card.querySelector(".product-category")?.innerText.trim() || "";
+
+        const matchesSearch = name.includes(searchTerm);
+        const matchesCategory = activeCategory === "All" || category === activeCategory;
+
+        card.style.display = (matchesSearch && matchesCategory) ? "" : "none";
+    });
+}
+document.addEventListener("DOMContentLoaded", () => {
+    loadShelfProducts();
+    setupSearch();
+    setupCategoryFilters();
+});

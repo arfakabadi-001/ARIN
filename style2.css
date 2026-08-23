@@ -54,8 +54,7 @@ NAVBAR
   padding: 16px 0;
   /* width: 100%; */
 }
-
-.logo {
+.custom-navbar .logo {
   width: 160px;
 }
 

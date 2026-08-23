@@ -1,386 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Report: LabelLense</title>
-        <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./media.css">
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-            crossorigin="anonymous"
-        >
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <!-- <link rel="stylesheet" href="./media.css"> -->
-    </head>
-    <body class="body">
-        <main class="py-5">
-            <div class="container product-content ">
-                <div class="card report-header-card border-0 p-4">
-                    <!-- Top Row -->
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <a href="scan.html" class="text-decoration-none report-back">
-                            <i class="bi bi-arrow-left"></i>
-                            Back to Scan
-                        </a>
-                        <button class="btn-secondary btn-sm px-3" id="shareReportBtn">
-    <i class="bi bi-share"></i>
-    &nbsp; Share Report
-</button>
-                    </div>
-                    <!-- Product -->
-                    <div class="row align-items-center">
-                        <!-- LEFT -->
-                        <div class="col-lg-8">
-                            <div class="d-flex gap-4 align-items-center">
-                                <div class="product-image">
-                                    <img id="productImage" src="" class="img-fluid rounded-3">
-                                </div>
-                                <div class="product-info">
-                                    <h2 class="fw-bold text-light mb-1" id="productName">
-                                        Quaker Oats
-                                    </h2>
-                                    <h3 class="fw-semibold report-subheading mb-2" id="productVariant">
-                                        Old Fashioned
-                                    </h3>
-                                    <p class="card-subtitle mb-3" id="productBrand">
-                                        Quaker
-                                    </p>
-                                    <span class="report-chip">
-                                        <i class="bi bi-basket-fill"></i>
-                                        Food
-                                    </span>
-                                    <span class="report-chip ms-2">
-                                        Whole Grain
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- RIGHT -->
-                        <div class="col-lg-4 text-center mt-4 mt-lg-0">
-                            <small class="card-subtitle text-light">
-                                Overall Health Score
-                            </small>
-                            <div class="health-circle mx-auto my-3">
-                                <div class="inner-circle">
-                                    <div class="score" id="healthScore">
-                                        85
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-success fw-semibold">
-                                <i class="bi bi-check-circle-fill"></i>
-                                Good Choice
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- SCORE BREAKDOWN -- NEW: explains WHY the score is what it is -->
-                <div class="card report-card border-0 mt-4">
-                    <div class="card-body">
-                        <h5 class="card-title mb-3 text-light">
-                            Score Kyun Mila? (Score Breakdown)
-                        </h5>
-                        <div id="scoreBreakdown" class="text-light"></div>
-                    </div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Report: LabelLense</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./media.css"> -->
+</head>
 
-                <div class="card border-0 mt-4 nutrition-card">
-                    <div class="card-body">
-                        <h5 class="card-title mb-4 text-light">
-                            Nutrition Summary
-                            <small class="text-secondary fs-6">(per 100g)</small>
-                        </h5>
-                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
-                            <div class="col">
-                                <div class="nutrition-box nutrition-highlight  rounded-4 text-center py-3 h-100">
-                                    <small class="d-block">Calories</small>
-                                    <h3 class="fw-bold mb-0" id="calVal">389</h3>
-                                    <small>kcal</small>
-                                </div>
+<body class="body">
+    <main class="py-5">
+        <div class="container product-content ">
+            <div class="card report-header-card border-0 p-4">
+                <!-- Top Row -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <a href="scan.html" class="text-decoration-none report-back">
+                        <i class="bi bi-arrow-left"></i>
+                        Back to Scan
+                    </a>
+                    <button class="btn-secondary btn-sm px-3" id="shareReportBtn">
+                        <i class="bi bi-share"></i>
+                        &nbsp; Share Report
+                    </button>
+                </div>
+                <!-- Product -->
+                <div class="row align-items-center">
+                    <!-- LEFT -->
+                    <div class="col-lg-8">
+                        <div class="d-flex gap-4 align-items-center">
+                            <div class="product-image">
+                                <img id="productImage" src="" class="img-fluid rounded-3">
                             </div>
-                            <div class="col">
-                                <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
-                                    <small class="text-secondary d-block">Protein</small>
-                                    <h3 class="fw-bold text-light mb-0" id="proteinVal">16.9</h3>
-                                    <small class="text-secondary">g</small>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
-                                    <small class="text-secondary d-block">Sugar</small>
-                                    <h3 class="fw-bold text-light mb-0" id="sugarVal">0.7</h3>
-                                    <small class="text-secondary">g</small>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
-                                    <small class="text-secondary d-block">Fat</small>
-                                    <h3 class="fw-bold text-light mb-0" id="fatVal">6.9</h3>
-                                    <small class="text-secondary">g</small>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
-                                    <small class="text-secondary d-block">Fiber</small>
-                                    <h3 class="fw-bold text-light mb-0" id="fiberVal">10.6</h3>
-                                    <small class="text-secondary">g</small>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
-                                    <small class="text-secondary d-block">Sodium</small>
-                                    <h3 class="fw-bold text-light mb-0" id="sodiumVal">2</h3>
-                                    <small class="text-secondary">mg</small>
-                                </div>
+                            <div class="product-info">
+                                <h2 class="fw-bold text-light mb-1" id="productName">
+                                    Quaker Oats
+                                </h2>
+                                <h3 class="fw-semibold report-subheading mb-2" id="productVariant">
+                                    Old Fashioned
+                                </h3>
+                                <p class="card-subtitle mb-3" id="productBrand">
+                                    Quaker
+                                </p>
+                                <span class="report-chip">
+                                    <i class="bi bi-basket-fill"></i>
+                                    Food
+                                </span>
+                                <span class="report-chip ms-2">
+                                    Whole Grain
+                                </span>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card report-card border-0 mt-4">
-                    <div class="card-body">
-                        <h5 class="text-light card-title mb-4">
-                            Health Indicators
-                        </h5>
-                        <div class="row g-3" id="healthIndicators"></div>
-                    </div>
-                </div>
-                <div class="row g-3 mt-1">
-                    <div class="col-lg-6">
-                        <div class="card report-card border-0 h-100">
-                            <div class="card-body text-light">
-                                <h5 class="card-title mb-4">
-                                    Suitable For
-                                </h5>
-                                <div class="row text-center  g-3" id="suitableForContainer">
-                                    <div class="col-3">
-                                        <i class="fa-solid fa-dumbbell suitable-icon"></i>
-                                        <p class="small mt-2 mb-0">Gym</p>
-                                    </div>
-                                    <div class="col-3">
-                                        <i class="fa-solid fa-weight-scale suitable-icon text-success"></i>
-                                        <p class="small mt-2 mb-0">Weight Loss</p>
-                                    </div>
-                                    <div class="col-3">
-                                        <i class="fa-solid fa-heart text-danger suitable-icon"></i>
-                                        <p class="small mt-2 mb-0">Heart</p>
-                                    </div>
-                                    <div class="col-3">
-                                        <i class="fa-solid fa-droplet suitable-icon text-info"></i>
-                                        <p class="small mt-2 mb-0">Diabetic</p>
-                                    </div>
+                    <!-- RIGHT -->
+                    <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                        <small class="card-subtitle text-light">
+                            Overall Health Score
+                        </small>
+                        <div class="health-circle mx-auto my-3">
+                            <div class="inner-circle">
+                                <div class="score" id="healthScore">
+                                    85
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="card report-card border-0 h-100">
-                            <div class="card-body">
-                                <h5 class="card-title text-light mb-4">
-                                    Recommendation
-                                </h5>
-                                <div class="d-flex align-items-center nutrition-box">
-                                    <i class="bi bi-hand-thumbs-up-fill fs-1 text-success me-3"></i>
-                                    <div class="">
-                                        <h6 class="text-light mb-1" id="recLabel">
-                                            Should Buy
-                                        </h6>
-                                        <p class="card-subtitle text-secondary mb-0" id="recDesc">
-                                            This product is healthy.
-Choose it for most people.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="text-success fw-semibold">
+                            <i class="bi bi-check-circle-fill"></i>
+                            Good Choice
                         </div>
                     </div>
                 </div>
-                <div class="card report-card border-0 mt-4">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <div class="d-flex align-items-center text-white">
-                               <div class="ai-icon me-3 d-flex align-items-center justify-content-center" style="width:40px;height:40px;border-radius:50%;">
-    <i class="bi bi-stars text-white"></i>
-</div>
-                                <h5 class="card-title mb-0">AI Summary</h5>
-                            </div>
-                            <div>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="bi bi-hand-thumbs-up"></i>
-                                </button>
-                                <button class="btn btn-sm btn-outline-secondary border-0">
-                                    <i class="bi bi-hand-thumbs-down"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <p class="card-subtitle text-secondary mb-0" id="aiSummaryText">
-                            This is a healthy whole grain product with high fiber and protein.
-It is low in sugar and sodium, making it a great choice for a balanced diet.
-                        </p>
-                    </div>
-                </div>
-                <div class="card text-light report-card border-0 mt-4">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h5 class="card-title mb-0">
-                                Ingredient Analysis
-                            </h5>
-                        </div>
-                        <div class="table-responsive">
-                            <div class="ingredient-header row py-2 text-secondary fw-semibold small">
-                                <div class="col-3">Ingredient</div>
-                                <div class="col-2">Purpose</div>
-                                <div class="col-5">Description</div>
-                                <div class="col-2 text-center">Status</div>
-                            </div>
-                            <div id="ingredientRows"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CLAIMS VS REALITY -- NEW: verifies label's marketing claims against actual numbers -->
-                <div class="card text-light report-card border-0 mt-4" id="claimsCard" style="display:none;">
-                    <div class="card-body">
-                        <h5 class="card-title mb-4">
-                            Label Ke Claims — Sach Ya Sirf Marketing?
-                        </h5>
-                        <div id="claimsRows"></div>
-                    </div>
-                </div>
-
-                <!-- Nutritional Breakdown -->
-                <div class="card border-0 mt-4 nutrition-breakdown-card">
-                    <div class="card-body">
-                        <h5 class="card-title mb-4 text-light">
-                            Nutritional Breakdown
-                        </h5>
-                        <div class="row g-4">
-                            <!-- Macronutrients -->
-                            <div class="col-lg-6">
-                                <div class="nutrition-chart-box h-100">
-                                    <h6 class="text-light mb-3">
-                                        Macronutrients
-                                    </h6>
-                                    <div class="row align-items-center">
-                                        <!-- Chart -->
-                                        <div class="col-md-7">
-                                            <div class="macro-chart">
-                                                <canvas id="macroChart"></canvas>
-                                            </div>
-                                        </div>
-                                        <!-- Legend -->
-                                        <div class="col-md-5">
-                                            <div class="macro-legend">
-                                                <div class="legend-item">
-                                                    <span class="legend-dot carbs"></span>
-                                                    <span>Carbs</span>
-                                                    <strong>65%</strong>
-                                                </div>
-                                                <div class="legend-item">
-                                                    <span class="legend-dot protein"></span>
-                                                    <span>Protein</span>
-                                                    <strong>17%</strong>
-                                                </div>
-                                                <div class="legend-item">
-                                                    <span class="legend-dot fat"></span>
-                                                    <span>Fat</span>
-                                                    <strong>16%</strong>
-                                                </div>
-                                                <div class="legend-item">
-                                                    <span class="legend-dot others"></span>
-                                                    <span>Others</span>
-                                                    <strong>2%</strong>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Nutrient Levels -->
-                            <div class="col-lg-6">
-                                <div class="nutrition-chart-box h-100">
-                                    <h6 class="text-light mb-4">
-                                        Nutrient Levels
-                                    </h6>
-                                    <!-- Fiber -->
-                                    <div class="nutrient-row ">
-                                        <div class="nutrient-label">
-                                            <span>Fiber</span>
-                                        </div>
-                                        <div class="nutrient-track">
-                                            <div class="nutrient-bar fiber-bar"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Protein -->
-                                    <div class="nutrient-row">
-                                        <div class="nutrient-label">
-                                            <span>Protein</span>
-                                        </div>
-                                        <div class="nutrient-track">
-                                            <div class="nutrient-bar protein-bar"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Sugar -->
-                                    <div class="nutrient-row">
-                                        <div class="nutrient-label">
-                                            <span>Sugar</span>
-                                        </div>
-                                        <div class="nutrient-track">
-                                            <div class="nutrient-bar sugar-bar"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Sodium -->
-                                    <div class="nutrient-row">
-                                        <div class="nutrient-label">
-                                            <span>Sodium</span>
-                                        </div>
-                                        <div class="nutrient-track">
-                                            <div class="nutrient-bar sodium-bar"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Fat -->
-                                    <div class="nutrient-row">
-                                        <div class="nutrient-label">
-                                            <span>Fat</span>
-                                        </div>
-                                        <div class="nutrient-track">
-                                            <div class="nutrient-bar fat-bar"></div>
-                                        </div>
-                                    </div>
-                                    <!-- Scale -->
-                                    <div class="nutrient-scale">
-                                        <span>Low</span>
-                                        <span>Moderate</span>
-                                        <span>High</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- VALUE FOR MONEY + ALTERNATIVES -- NEW: this is the project's core differentiator -->
-                <div class="card text-light report-card border-0 mt-4">
-                    <div class="card-body">
-                        <h5 class="card-title mb-3">
-                            Value For Money
-                        </h5>
-                        <p class="fw-bold mb-1 text-light" id="valueVerdict"></p>
-                        <p class="text-secondary mb-4" id="valueReason"></p>
-                        <h6 class="text-light mb-2">Behtar Options Dhundhte Waqt Ye Dekho</h6>
-                        <ul class="text-secondary" id="alternativesList"></ul>
-                    </div>
-                </div>
-
             </div>
-        </main>
+
+            <!-- SCORE BREAKDOWN -- NEW: explains WHY the score is what it is -->
+            <div class="card report-card border-0 mt-4">
+                <div class="card-body">
+                    <h5 class="card-title mb-3 text-light">
+                        Score Kyun Mila? (Score Breakdown)
+                    </h5>
+                    <div id="scoreBreakdown" class="text-light"></div>
+                </div>
+            </div>
+
+            <div class="card border-0 mt-4 nutrition-card">
+                <div class="card-body">
+                    <h5 class="card-title mb-4 text-light">
+                        Nutrition Summary
+                        <small class="text-secondary fs-6">(per 100g)</small>
+                    </h5>
+                    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
+                        <div class="col">
+                            <div class="nutrition-box nutrition-highlight  rounded-4 text-center py-3 h-100">
+                                <small class="d-block">Calories</small>
+                                <h3 class="fw-bold mb-0" id="calVal">389</h3>
+                                <small>kcal</small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
+                                <small class="text-secondary d-block">Protein</small>
+                                <h3 class="fw-bold text-light mb-0" id="proteinVal">16.9</h3>
+                                <small class="text-secondary">g</small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
+                                <small class="text-secondary d-block">Sugar</small>
+                                <h3 class="fw-bold text-light mb-0" id="sugarVal">0.7</h3>
+                                <small class="text-secondary">g</small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
+                                <small class="text-secondary d-block">Fat</small>
+                                <h3 class="fw-bold text-light mb-0" id="fatVal">6.9</h3>
+                                <small class="text-secondary">g</small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
+                                <small class="text-secondary d-block">Fiber</small>
+                                <h3 class="fw-bold text-light mb-0" id="fiberVal">10.6</h3>
+                                <small class="text-secondary">g</small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class=" rounded-4 text-center py-3 h-100 nutrition-box">
+                                <small class="text-secondary d-block">Sodium</small>
+                                <h3 class="fw-bold text-light mb-0" id="sodiumVal">2</h3>
+                                <small class="text-secondary">mg</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card report-card border-0 mt-4">
+                <div class="card-body">
+                    <h5 class="text-light card-title mb-4">
+                        Health Indicators
+                    </h5>
+                    <div class="row g-3" id="healthIndicators"></div>
+                </div>
+            </div>
+            <div class="row g-3 mt-1">
+                <div class="col-lg-6">
+                    <div class="card report-card border-0 h-100">
+                        <div class="card-body text-light">
+                            <h5 class="card-title mb-4">
+                                Suitable For
+                            </h5>
+                            <div class="row text-center  g-3" id="suitableForContainer">
+                                <div class="col-3">
+                                    <i class="fa-solid fa-dumbbell suitable-icon"></i>
+                                    <p class="small mt-2 mb-0">Gym</p>
+                                </div>
+                                <div class="col-3">
+                                    <i class="fa-solid fa-weight-scale suitable-icon text-success"></i>
+                                    <p class="small mt-2 mb-0">Weight Loss</p>
+                                </div>
+                                <div class="col-3">
+                                    <i class="fa-solid fa-heart text-danger suitable-icon"></i>
+                                    <p class="small mt-2 mb-0">Heart</p>
+                                </div>
+                                <div class="col-3">
+                                    <i class="fa-solid fa-droplet suitable-icon text-info"></i>
+                                    <p class="small mt-2 mb-0">Diabetic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card report-card border-0 h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-light mb-4">
+                                Recommendation
+                            </h5>
+                            <div class="d-flex align-items-center nutrition-box">
+                                <i class="bi bi-hand-thumbs-up-fill fs-1 text-success me-3"></i>
+                                <div class="">
+                                    <h6 class="text-light mb-1" id="recLabel">
+                                        Should Buy
+                                    </h6>
+                                    <p class="card-subtitle text-secondary mb-0" id="recDesc">
+                                        This product is healthy.
+                                        Choose it for most people.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card report-card border-0 mt-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="d-flex align-items-center text-white">
+                            <div class="ai-icon me-3 d-flex align-items-center justify-content-center"
+                                style="width:40px;height:40px;border-radius:50%;">
+                                <i class="bi bi-stars text-white"></i>
+                            </div>
+                            <h5 class="card-title mb-0">AI Summary</h5>
+                        </div>
+                        <div>
+                            <button class="btn btn-sm btn-outline-secondary border-0">
+                                <i class="bi bi-hand-thumbs-up"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-secondary border-0">
+                                <i class="bi bi-hand-thumbs-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="card-subtitle text-secondary mb-0" id="aiSummaryText">
+                        This is a healthy whole grain product with high fiber and protein.
+                        It is low in sugar and sodium, making it a great choice for a balanced diet.
+                    </p>
+                </div>
+            </div>
+            <div class="card text-light report-card border-0 mt-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h5 class="card-title mb-0">
+                            Ingredient Analysis
+                        </h5>
+                    </div>
+                    <div class="table-responsive">
+                        <div class="ingredient-header row py-2 text-secondary fw-semibold small">
+                            <div class="col-3">Ingredient</div>
+                            <div class="col-2">Purpose</div>
+                            <div class="col-5">Description</div>
+                            <div class="col-2 text-center">Status</div>
+                        </div>
+                        <div id="ingredientRows"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CLAIMS VS REALITY -- NEW: verifies label's marketing claims against actual numbers -->
+            <div class="card text-light report-card border-0 mt-4" id="claimsCard" style="display:none;">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">
+                        Label Ke Claims — Sach Ya Sirf Marketing?
+                    </h5>
+                    <div id="claimsRows"></div>
+                </div>
+            </div>
+
+            <!-- Nutritional Breakdown -->
+            <div class="card border-0 mt-4 nutrition-breakdown-card">
+                <div class="card-body">
+                    <h5 class="card-title mb-4 text-light">
+                        Nutritional Breakdown
+                    </h5>
+                    <div class="row g-4">
+                        <!-- Macronutrients -->
+                        <div class="col-lg-6">
+                            <div class="nutrition-chart-box h-100">
+                                <h6 class="text-light mb-3">
+                                    Macronutrients
+                                </h6>
+                                <div class="row align-items-center">
+                                    <!-- Chart -->
+                                    <div class="col-md-7">
+                                        <div class="macro-chart">
+                                            <canvas id="macroChart"></canvas>
+                                        </div>
+                                    </div>
+                                    <!-- Legend -->
+                                    <div class="col-md-5">
+                                        <div class="macro-legend">
+                                            <div class="legend-item">
+                                                <span class="legend-dot carbs"></span>
+                                                <span>Carbs</span>
+                                                <strong>65%</strong>
+                                            </div>
+                                            <div class="legend-item">
+                                                <span class="legend-dot protein"></span>
+                                                <span>Protein</span>
+                                                <strong>17%</strong>
+                                            </div>
+                                            <div class="legend-item">
+                                                <span class="legend-dot fat"></span>
+                                                <span>Fat</span>
+                                                <strong>16%</strong>
+                                            </div>
+                                            <div class="legend-item">
+                                                <span class="legend-dot others"></span>
+                                                <span>Others</span>
+                                                <strong>2%</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nutrient Levels -->
+                        <div class="col-lg-6">
+                            <div class="nutrition-chart-box h-100">
+                                <h6 class="text-light mb-4">
+                                    Nutrient Levels
+                                </h6>
+                                <!-- Fiber -->
+                                <div class="nutrient-row ">
+                                    <div class="nutrient-label">
+                                        <span>Fiber</span>
+                                    </div>
+                                    <div class="nutrient-track">
+                                        <div class="nutrient-bar fiber-bar"></div>
+                                    </div>
+                                </div>
+                                <!-- Protein -->
+                                <div class="nutrient-row">
+                                    <div class="nutrient-label">
+                                        <span>Protein</span>
+                                    </div>
+                                    <div class="nutrient-track">
+                                        <div class="nutrient-bar protein-bar"></div>
+                                    </div>
+                                </div>
+                                <!-- Sugar -->
+                                <div class="nutrient-row">
+                                    <div class="nutrient-label">
+                                        <span>Sugar</span>
+                                    </div>
+                                    <div class="nutrient-track">
+                                        <div class="nutrient-bar sugar-bar"></div>
+                                    </div>
+                                </div>
+                                <!-- Sodium -->
+                                <div class="nutrient-row">
+                                    <div class="nutrient-label">
+                                        <span>Sodium</span>
+                                    </div>
+                                    <div class="nutrient-track">
+                                        <div class="nutrient-bar sodium-bar"></div>
+                                    </div>
+                                </div>
+                                <!-- Fat -->
+                                <div class="nutrient-row">
+                                    <div class="nutrient-label">
+                                        <span>Fat</span>
+                                    </div>
+                                    <div class="nutrient-track">
+                                        <div class="nutrient-bar fat-bar"></div>
+                                    </div>
+                                </div>
+                                <!-- Scale -->
+                                <div class="nutrient-scale">
+                                    <span>Low</span>
+                                    <span>Moderate</span>
+                                    <span>High</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VALUE FOR MONEY + ALTERNATIVES -- NEW: this is the project's core differentiator -->
+            <div class="card text-light report-card border-0 mt-4">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">
+                        Value For Money
+                    </h5>
+                    <p class="fw-bold mb-1 text-light" id="valueVerdict"></p>
+                    <p class="text-secondary mb-4" id="valueReason"></p>
+                    <h6 class="text-light mb-2">Behtar Options Dhundhte Waqt Ye Dekho</h6>
+                    <ul class="text-secondary" id="alternativesList"></ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
+
     <script src="./script/report.js"></script>
 </body>
+
 </html>
