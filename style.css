@@ -24,7 +24,8 @@
   --text-red: #974e50;
   --border-color: #2d3b4fcb;
   /*thorasa transparent h jaise ui m h*/
-  --card-radius: 1rem --shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  --card-radius: 1rem ;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 * {
   margin: 0;

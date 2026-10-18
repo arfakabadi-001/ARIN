@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">        <title>Scan Now: ARIN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scan Now: ARIN</title>
         <link rel="stylesheet" href="./style.css">
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -133,7 +134,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="scan-tip-card h-100 p-4">
-                                                 <div class=" text-center ">
+                                                <div class=" text-center ">
                                                     <div class="scan-tip-icon mb-2 mx-auto">
                                                         <i class="bi bi-aspect-ratio-fill"></i>
                                                     </div>
@@ -148,7 +149,7 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="scan-tip-card h-100 p-4">
-                                                 <div class=" text-center ">
+                                                <div class=" text-center ">
                                                     <div class="scan-tip-icon mb-2 mx-auto">
                                                         <i class="bi bi-zoom-in"></i>
                                                     </div>
@@ -190,11 +191,7 @@
                                         <p class="card-subtitle">
                                             Drag & drop your image here or browse from your device.
                                         </p>
-                                        <input
-                                            type="file"
-                                            id="scanImageInput"
-                                            class="d-none"
-                                        >
+                                        <input type="file" id="scanImageInput" class="d-none">
                                         <button class=" btn-secondary mt-4" id="browseBtn">
                                             Browse Files
                                         </button>
@@ -327,28 +324,31 @@
                     </div>
                 </div>
                 <!-- Camera Modal -->
-<div class="modal fade" id="cameraModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-dark">
-            <div class="modal-header border-secondary">
-                <h5 class="modal-title text-white">Capture Product Label</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body text-center">
-                <video id="cameraStream" autoplay playsinline class="w-100 rounded-3 mb-3"></video>
-                <canvas id="cameraCanvas" class="d-none"></canvas>
-                <button class="btn-secondary" id="captureBtn">
-                    <i class="bi bi-camera-fill me-2"></i>Capture Photo
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+                <div class="modal fade" id="cameraModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-header border-secondary">
+                                <h5 class="modal-title text-white">Capture Product Label</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <video
+                                    id="cameraStream"
+                                    autoplay
+                                    playsinline
+                                    class="w-100 rounded-3 mb-3"
+                                ></video>
+                                <canvas id="cameraCanvas" class="d-none"></canvas>
+                                <button class="btn-secondary" id="captureBtn">
+                                    <i class="bi bi-camera-fill me-2"></i>
+                                    Capture Photo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-                        <script src="./script/Newsletter.js"></script>
-
-                <script src="./script/scan.js">
-          
-                </script>
+                <script src="./script/Newsletter.js"></script>
+                <script src="./script/scan.js"></script>
             </body>
         </html>

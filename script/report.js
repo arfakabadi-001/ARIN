@@ -228,11 +228,11 @@ function setupShareButton() {
     shareBtn.addEventListener("click", async () => {
         const shareText =
             `📋 ${data.product.name} — Health Score: ${data.health_score}/100 (${data.recommendation.label})\n\n` +
-            `${data.ai_summary}\n\nAnalyzed with LabelLense 🔍`;
+            `${data.ai_summary}\n\nAnalyzed with ARIN 🔍`;
 
         if (navigator.share) {
             try {
-                await navigator.share({ title: `${data.product.name} — LabelLense Report`, text: shareText });
+                await navigator.share({ title: `${data.product.name} — ARIN Report`, text: shareText });
             } catch (err) {
                 console.log("Share cancelled or failed:", err);
             }
