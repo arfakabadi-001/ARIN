@@ -14,7 +14,7 @@ app = Flask(__name__)
 CORS(app)
 
 # --- Setup ---
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 groq_client = Groq(api_key=os.environ["GROQ_API_KEY"])
 
@@ -114,12 +114,14 @@ def analyze():
     try:
         ai_text = analyze_with_gemini(pil_image)
     except Exception as gemini_error:
-        print("Gemini failed, switching to Groq backup:", gemini_error)
+        app.logger.exception("Gemini API call failed")
         try:
             ai_text = analyze_with_groq(pil_image)
         except Exception as groq_error:
-            print("Groq also failed:", groq_error)
-            return jsonify({"error": "Both AI services are unavailable right now."}), 500
+            app.logger.exception("Groq fallback failed")
+            return jsonify({
+                "error": "Both AI services are unavailable right now."
+            }), 500
 
     # 4. JSON parse karo
     ai_text = ai_text.replace("```json", "").replace("```", "")
