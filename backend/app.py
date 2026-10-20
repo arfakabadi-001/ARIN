@@ -101,8 +101,15 @@ def home():
 def analyze():
     # 1. Image memory me padho (disk pe save nahi karna, fast hai)
     image_bytes = request.files["image"].read()
-    pil_image = Image.open(io.BytesIO(image_bytes))
-    pil_image.thumbnail((400, 400))  # chhota karo, AI ko fast process karne ke liye
+
+    pil_image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+
+    # Original resolution OCR ke liye preserve karo
+    groq_image = pil_image.copy()
+
+    # Gemini ke liye separate resized copy
+    gemini_image = pil_image.copy()
+    gemini_image.thumbnail((1000, 1000))      # chhota karo, AI ko fast process karne ke liye
 
     # 2. Cache check — same image dobara aaye to seedha purana result do
     image_hash = hashlib.md5(image_bytes).hexdigest()
@@ -112,11 +119,11 @@ def analyze():
 
     # 3. Gemini try karo, fail ho to Groq pe switch
     try:
-        ai_text = analyze_with_gemini(pil_image)
+        ai_text = analyze_with_gemini(gemini_image)
     except Exception as gemini_error:
         app.logger.exception("Gemini API call failed")
         try:
-            ai_text = analyze_with_groq(pil_image)
+            ai_text = analyze_with_groq(groq_image)
         except Exception as groq_error:
             app.logger.exception("Groq fallback failed")
             return jsonify({
