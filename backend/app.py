@@ -83,7 +83,7 @@ def analyze_with_groq(pil_image):
     full_prompt = f"{SYSTEM_INSTRUCTION}\n\nProduct label OCR text:\n{ocr_text}\n\n{JSON_SCHEMA}"
 
     response = groq_client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[{"role": "user", "content": full_prompt}],
         temperature=0
     )
